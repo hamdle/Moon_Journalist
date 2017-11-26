@@ -196,7 +196,7 @@ GameObject:
   - component: {fileID: 1113401004}
   - component: {fileID: 1113401003}
   - component: {fileID: 1113401005}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tilemap_ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1253,7 +1253,7 @@ TilemapCollider2D:
   m_GameObject: {fileID: 1113401001}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ffd194b6b77d0944c9c9df30e158e2f2, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1288,9 +1288,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 10
   facingRight: 0
-  playerJumpPower: 1250
-  moveX: 0
+  playerJumpPower: 800
   isGrounded: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  isGroundedBleed: 0
 --- !u!1 &1325427335 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1180657921462366, guid: ecca83927197de44da81f6c3a0c4c9e3,
@@ -1374,7 +1377,7 @@ Prefab:
     - target: {fileID: 50420110005322976, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8,
         type: 2}
       propertyPath: m_GravityScale
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 50420110005322976, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8,
         type: 2}
