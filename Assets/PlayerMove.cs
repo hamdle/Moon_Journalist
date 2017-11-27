@@ -26,16 +26,9 @@ public class PlayerMove : MonoBehaviour {
 		Vector2 direction = Vector2.down;
 		float distance = 1.0f;
 		float width = GetComponent<SpriteRenderer>().bounds.size.x;
-		float speedBasedBleed = 0.0f;
-		
-		// Allow ground bleed (larger jump hit width) if moving full speed
-		if (Mathf.Abs(xMovement) == 1)
-		{
-			 speedBasedBleed = isGroundedBleed;
-		}
 
-		Vector2 leftPosition = position - (new Vector2(width / 2 + speedBasedBleed, 0));
-		Vector2 rightPosition = position + (new Vector2(width / 2 + speedBasedBleed, 0));
+		Vector2 leftPosition = position - (new Vector2(width / 2 + isGroundedBleed, 0));
+		Vector2 rightPosition = position + (new Vector2(width / 2 + isGroundedBleed, 0));
 
 		// DEBUG
 		Debug.DrawRay(leftPosition, direction, Color.green, 5.0f);

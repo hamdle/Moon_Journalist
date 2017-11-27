@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 20956502734696410}
   - component: {fileID: 124213370011514094}
   - component: {fileID: 81817369576458024}
-  - component: {fileID: 114874236074295764}
+  - component: {fileID: 114831421088698978}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -51,8 +51,8 @@ Camera:
   m_GameObject: {fileID: 1180657921462366}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.19852942, g: 0.19852942, b: 0.19852942, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -85,7 +85,7 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1180657921462366}
   m_Enabled: 1
---- !u!114 &114874236074295764
+--- !u!114 &114831421088698978
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -93,11 +93,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1180657921462366}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c632375125b60c4e82b33eb7490aa14, type: 3}
+  m_Script: {fileID: 11500000, guid: ba20af930ef325a449c154dc0af04450, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
+  xMin: 0
+  xMax: 80
+  yMin: 0
+  yMax: 0
 --- !u!124 &124213370011514094
 Behaviour:
   m_ObjectHideFlags: 1
