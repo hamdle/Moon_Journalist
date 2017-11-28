@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour {
 
-	public int health;
+	[SerializeField] int health = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -13,14 +13,35 @@ public class PlayerHealth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (gameObject.transform.position.y < -7)
+
+		CheckFallDeath();
+
+		if (health < 0)
 		{
 			Die();
+		}
+	}
+
+	void CheckFallDeath()
+	{
+		if (gameObject.transform.position.y < -7)
+		{
+			PlayerHit(health + 1);
 		}
 	}
 
 	void Die()
 	{
 		SceneManager.LoadScene("Main");
+	}
+
+	public void PlayerHit(int damage)
+	{
+		health -= damage;
+	}
+
+	public void LeadCoinCollected()
+	{
+		health++;
 	}
 }

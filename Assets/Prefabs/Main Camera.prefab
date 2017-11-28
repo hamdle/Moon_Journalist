@@ -52,7 +52,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19852942, g: 0.19852942, b: 0.19852942, a: 0}
+  m_BackGroundColor: {r: 0.2, g: 0.2, b: 0.24313726, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xMin: 0
-  xMax: 80
+  xMax: 200
   yMin: 0
   yMax: 0
 --- !u!124 &124213370011514094
