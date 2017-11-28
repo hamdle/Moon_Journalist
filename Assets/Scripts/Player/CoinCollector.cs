@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CoinCollector : MonoBehaviour {
 
+	[SerializeField] private int coinsInThisLevel = 0;
+	[SerializeField] private int leadsInThisLevel = 0;
+
 	[SerializeField] int coinsCollected;
 	[SerializeField] int leadsCollected;
 
@@ -32,5 +35,13 @@ public class CoinCollector : MonoBehaviour {
 			playerHealth.LeadCoinCollected();
 			Destroy(collision.gameObject);
 		}
+	}
+
+	public void RegisterCoin(bool isLead)
+	{
+		if (!isLead)
+			coinsInThisLevel++;
+		else
+			leadsInThisLevel++;
 	}
 }

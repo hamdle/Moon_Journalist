@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a95622687cdfc2d439204d974fdcd241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsInThisLevel: 0
   coinsCollected: 0
   leadsCollected: 0
   playerHealth: {fileID: 114197705311498104}
