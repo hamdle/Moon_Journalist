@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4767013112376804}
   - component: {fileID: 212721093958836806}
+  - component: {fileID: 114348197914409184}
   m_Layer: 0
   m_Name: Pencil
   m_TagString: Untagged
@@ -40,6 +41,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114348197914409184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1618737150123524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 119b2330999c58e45bafbb4fc07a8880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: {x: -0.44, y: 0.14, z: 0}
 --- !u!212 &212721093958836806
 SpriteRenderer:
   m_ObjectHideFlags: 1
