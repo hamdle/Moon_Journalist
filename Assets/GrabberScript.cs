@@ -5,6 +5,7 @@ using UnityEngine;
 public class GrabberScript : MonoBehaviour {
 
 	public float distance = 2f;
+	public float throwForce;
 	public Transform holdPoint;
 
 	[SerializeField] bool grabbed;
@@ -30,10 +31,8 @@ public class GrabberScript : MonoBehaviour {
 
 			if (!grabbed)
 			{
-				//Physics2D.raycastsStartInColliders = false;
-				
-
-				if (hit.collider != null)
+				// grab
+				if (hit.collider != null && hit.collider.name == "mic")
 				{
 					grabbed = true;
 				}
@@ -41,6 +40,11 @@ public class GrabberScript : MonoBehaviour {
 			else
 			{
 				// throw
+				grabbed = false;
+
+				Rigidbody2D colliderRb = hit.collider.gameObject.GetComponent<Rigidbody2D>();
+
+				colliderRb.velocity = new Vector2(transform.localScale.x, 1) * throwForce;
 			}
 		}
 
