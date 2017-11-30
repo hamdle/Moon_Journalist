@@ -33,7 +33,7 @@ public class LeadTaker : MonoBehaviour {
 		if (attachToPlayer)
 			AttachToPlayer();
 
-		ProcessControls();
+		//ProcessControls();
 	}
 
 	private void FixedUpdate()

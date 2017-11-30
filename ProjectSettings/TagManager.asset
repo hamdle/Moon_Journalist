@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Coin
   - Lead Coin
+  - Grabable
   layers:
   - Default
   - TransparentFX

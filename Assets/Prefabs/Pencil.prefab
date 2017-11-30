@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4767013112376804}
   - component: {fileID: 212721093958836806}
   - component: {fileID: 114348197914409184}
+  - component: {fileID: 50674408132815306}
+  - component: {fileID: 61788852986930982}
   m_Layer: 0
   m_Name: Pencil
   m_TagString: Untagged
@@ -35,12 +37,57 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1618737150123524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.2383378, y: 1.2080507, z: 0}
+  m_LocalPosition: {x: 0.11, y: -0.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50674408132815306
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1618737150123524}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 1
+  m_AngularDrag: 0.62
+  m_GravityScale: 3
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 2
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &61788852986930982
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1618737150123524}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: c402b9d72a5b2944d8449c9050b2a24d, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.04248953, y: -0.010622039}
+  m_SpriteTilingProperty:
+    border: {x: 0.4375, y: 0.0625, z: 0.375, w: 0.125}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2351923, y: 0.85128784}
+  m_EdgeRadius: 0
 --- !u!114 &114348197914409184
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,7 +99,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 119b2330999c58e45bafbb4fc07a8880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: -0.44, y: 0.14, z: 0}
+  offset: {x: 0.9, y: 0.1, z: 0}
+  rb: {fileID: 0}
+  thrust: {x: 10, y: 30}
+  torque: 2
+  attachToPlayer: 1
 --- !u!212 &212721093958836806
 SpriteRenderer:
   m_ObjectHideFlags: 1
