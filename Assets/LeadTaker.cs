@@ -12,7 +12,9 @@ public class LeadTaker : MonoBehaviour {
 	GameObject player;
 	PlayerMove playerHealth;
 	bool prevPlayerFacingRight;
-	public bool attachToPlayer = true;
+	[SerializeField] bool attachToPlayer = true;
+	BoxCollider2D boxCollider;
+	bool applyForces = false;
 
 	// Use this for initialization
 	void Start () {
@@ -21,6 +23,8 @@ public class LeadTaker : MonoBehaviour {
 		prevPlayerFacingRight = playerHealth.facingRight;
 
 		rb = GetComponent<Rigidbody2D>();
+		boxCollider = GetComponent<BoxCollider2D>();
+		boxCollider.enabled = true;
 	}
 	
 	// Update is called once per frame
@@ -30,6 +34,16 @@ public class LeadTaker : MonoBehaviour {
 			AttachToPlayer();
 
 		ProcessControls();
+	}
+
+	private void FixedUpdate()
+	{
+		if (applyForces)
+		{
+			rb.AddForce(thrust, ForceMode2D.Impulse);
+			rb.AddTorque(torque, ForceMode2D.Impulse);
+			applyForces = false;
+		}
 	}
 
 	private void ProcessControls()
@@ -43,9 +57,11 @@ public class LeadTaker : MonoBehaviour {
 	private void ThrowLeadTaker()
 	{
 		attachToPlayer = false;
+
+		boxCollider.enabled = true;
+
+		applyForces = true;
 		
-		rb.AddForce(thrust, ForceMode2D.Impulse);
-		rb.AddTorque(torque, ForceMode2D.Impulse);
 	}
 
 	private void AttachToPlayer()
