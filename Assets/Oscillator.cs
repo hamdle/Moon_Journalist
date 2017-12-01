@@ -33,13 +33,6 @@ public class Oscillator : MonoBehaviour {
 		Vector3 offset = movementFactor * movementVector;
 		transform.position = startingPosition + offset;
 
-		if (Input.GetButtonDown("Jump") || Input.GetKeyDown("w"))
-		{
-			if (moving)
-			{
-				moving = false; 
-			}
-		}
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)

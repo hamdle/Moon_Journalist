@@ -11,6 +11,7 @@ public class PlayerMove : MonoBehaviour {
 	public int playerJumpPower = 100;
 	public bool isGrounded;
 	public LayerMask groundLayer;
+	public LayerMask platformLayer;
 	public float isGroundedBleed = 0;
 
 	float xMovement;
@@ -35,12 +36,20 @@ public class PlayerMove : MonoBehaviour {
 		Debug.DrawRay(rightPosition, direction, Color.green, 5.0f);
 		Debug.DrawRay(position, direction, Color.red, 5.0f);
 
+		// Check col with ground layer
 		RaycastHit2D centerHit = Physics2D.Raycast(position, direction, distance, groundLayer);
 		RaycastHit2D leftHit = Physics2D.Raycast(leftPosition, direction, distance, groundLayer);
 		RaycastHit2D rightHit = Physics2D.Raycast(rightPosition, direction, distance, groundLayer);
 
-		//Debug.Log(hit.distance);
-		//Debug.Log(hit.collider);
+		if (centerHit.collider != null || leftHit.collider != null || rightHit.collider != null)
+		{
+			return true;
+		}
+
+		// Check col with platform layer
+		centerHit = Physics2D.Raycast(position, direction, distance, platformLayer);
+		leftHit = Physics2D.Raycast(leftPosition, direction, distance, platformLayer);
+		rightHit = Physics2D.Raycast(rightPosition, direction, distance, platformLayer);
 
 		if (centerHit.collider != null || leftHit.collider != null || rightHit.collider != null)
 		{
@@ -100,6 +109,10 @@ public class PlayerMove : MonoBehaviour {
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
 		if (collision.collider.name == "Tilemap_ground")
+		{
+			isGrounded = true;
+		}
+		if (collision.gameObject.CompareTag("Moving Platform"))
 		{
 			isGrounded = true;
 		}
