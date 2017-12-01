@@ -25,7 +25,7 @@ public class GrabberScript : MonoBehaviour {
 
 			hit = Physics2D.Raycast(lineStart, Vector2.right * transform.localScale.x, distance);
 
-			Debug.Log(hit.collider.name);
+			//Debug.Log(hit.collider.name);
 
 			
 
