@@ -7,6 +7,7 @@ public class MicrophoneThrower : MonoBehaviour {
 	public Transform prefab;
 	public Vector2 throwForce;
 	public float torque;
+	public float torqueDeviation;
 	public Vector3 throwOffset;
 
 	// Use this for initialization
@@ -20,12 +21,21 @@ public class MicrophoneThrower : MonoBehaviour {
 		
 		if (Input.GetButtonDown("Fire1"))
 		{
+			// Throw force
 			Vector2 newThrowForce = new Vector2(throwForce.x * transform.localScale.x, throwForce.y);
 			Vector3 newThrowOffset = new Vector3(throwOffset.x * transform.localScale.x, throwOffset.y, 0);
 
+			float torqueRandDeviation = 0f;
+
+			// Calc random torque deviation
+			if (torqueDeviation != 0 )
+				torqueRandDeviation = UnityEngine.Random.Range(0, torqueDeviation);
+			
+			// todo make rotate negative if throwing left
+			
 			Transform microphone = Instantiate(prefab, transform.position + newThrowOffset, Quaternion.identity);
 			microphone.GetComponent<Rigidbody2D>().AddForce(newThrowForce, ForceMode2D.Impulse);
-			microphone.GetComponent<Rigidbody2D>().AddTorque(torque, ForceMode2D.Impulse);
+			microphone.GetComponent<Rigidbody2D>().AddTorque(torque + torqueRandDeviation, ForceMode2D.Impulse);
 		}
 	}
 }
