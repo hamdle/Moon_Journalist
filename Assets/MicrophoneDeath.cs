@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DelayedKillOnCollision : MonoBehaviour {
+public class MicrophoneDeath : MonoBehaviour {
+
+	float deathDelay = 1f;
 
 	// Use this for initialization
 	void Start () {
@@ -16,11 +18,15 @@ public class DelayedKillOnCollision : MonoBehaviour {
 
 	public void OnCollisionEnter2D(Collision2D collision)
 	{
-		Invoke("KillSelf", 1f);
+		// todo setup fade to alpha based on deathDelay
+		//Color color = this.gameObject.GetComponent<Renderer>().material.color;
+
+		Invoke("KillSelf", deathDelay);
 	}
 
 	private void KillSelf()
 	{
+		
 		Destroy(this.gameObject);
 	}
 }

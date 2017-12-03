@@ -20,6 +20,7 @@ public class TakeDamage : MonoBehaviour {
 	{
 		if (collision.gameObject.CompareTag("Projectile"))
 		{
+			collision.collider.enabled = false;
 			Invoke("Kill", killTimer);
 		}
 	}
