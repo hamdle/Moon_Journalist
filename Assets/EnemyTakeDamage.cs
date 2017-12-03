@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TakeDamage : MonoBehaviour {
+public class EnemyTakeDamage : MonoBehaviour {
 
 	public float killTimer;
 	[Range(0,1)] public float flashTimer;

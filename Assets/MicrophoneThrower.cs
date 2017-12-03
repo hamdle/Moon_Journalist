@@ -10,17 +10,20 @@ public class MicrophoneThrower : MonoBehaviour {
 	public float torqueDeviation;
 	public Vector3 throwOffset;
 
+	Rigidbody2D rb;
+
 	// Use this for initialization
 	void Start () {
-
+		rb = gameObject.GetComponent<Rigidbody2D>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//Debug.Log(transform.position);
 		
 		if (Input.GetButtonDown("Fire1"))
 		{
+			Debug.Log("player: " + rb.velocity);
+
 			// Throw force
 			Vector2 newThrowForce = new Vector2(throwForce.x * transform.localScale.x, throwForce.y);
 			Vector3 newThrowOffset = new Vector3(throwOffset.x * transform.localScale.x, throwOffset.y, 0);
@@ -36,6 +39,7 @@ public class MicrophoneThrower : MonoBehaviour {
 			Transform microphone = Instantiate(prefab, transform.position + newThrowOffset, Quaternion.identity);
 			microphone.GetComponent<Rigidbody2D>().AddForce(newThrowForce, ForceMode2D.Impulse);
 			microphone.GetComponent<Rigidbody2D>().AddTorque(torque + torqueRandDeviation, ForceMode2D.Impulse);
+			microphone.GetComponent<Rigidbody2D>().velocity = new Vector2(microphone.GetComponent<Rigidbody2D>().velocity.x + rb.velocity.x, 0);
 		}
 	}
 }

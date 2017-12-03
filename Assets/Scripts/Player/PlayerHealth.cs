@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour {
 
 	[SerializeField] int health = 0;
+	[SerializeField] [Range(0, 1)] float flashTimer = 0.1f;
 
 	// Use this for initialization
 	void Start () {
@@ -38,6 +39,20 @@ public class PlayerHealth : MonoBehaviour {
 	public void PlayerHit(int damage)
 	{
 		health -= damage;
+		StartCoroutine(Flash(this.gameObject, flashTimer));
+	}
+
+	private IEnumerator Flash(GameObject gameObject, float flashTimer)
+	{
+		SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
+		//for (int i = 0; i < 10; i++)
+		//{
+		spriteRenderer.enabled = false;
+		yield return new WaitForSeconds(flashTimer);
+		spriteRenderer.enabled = true;
+		yield return new WaitForSeconds(flashTimer);
+		//}
 	}
 
 	public void HealthCollected()
