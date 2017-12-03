@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: b3516a85f6bade34788402dca05c9738
+timeCreated: 1512261368
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Bowlby One SC
+  fontNames:
+  - Bowlby One SC
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
