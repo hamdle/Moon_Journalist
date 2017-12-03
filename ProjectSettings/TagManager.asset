@@ -8,6 +8,7 @@ TagManager:
   - Lead Coin
   - Platform
   - Moving Platform
+  - PatrolEnemy
   layers:
   - Default
   - TransparentFX

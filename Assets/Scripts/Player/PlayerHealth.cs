@@ -40,7 +40,7 @@ public class PlayerHealth : MonoBehaviour {
 		health -= damage;
 	}
 
-	public void LeadCoinCollected()
+	public void HealthCollected()
 	{
 		health++;
 	}

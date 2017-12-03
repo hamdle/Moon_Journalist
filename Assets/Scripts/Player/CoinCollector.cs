@@ -32,7 +32,7 @@ public class CoinCollector : MonoBehaviour {
 		else if (collision.CompareTag("Lead Coin"))
 		{
 			leadsCollected++;
-			playerHealth.LeadCoinCollected();
+			playerHealth.HealthCollected();
 			Destroy(collision.gameObject);
 		}
 	}

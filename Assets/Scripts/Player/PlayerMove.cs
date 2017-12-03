@@ -15,6 +15,12 @@ public class PlayerMove : MonoBehaviour {
 	public float isGroundedBleed = 0;
 
 	float xMovement;
+	Rigidbody2D rb;
+
+	private void Start()
+	{
+		rb = gameObject.GetComponent<Rigidbody2D>();
+	}
 
 	// Update is called once per frame
 	void Update () {
@@ -87,14 +93,14 @@ public class PlayerMove : MonoBehaviour {
 	private void FixedUpdate()
 	{
 		// Physics
-		gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(xMovement * playerSpeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
+		rb.velocity = new Vector2(xMovement * playerSpeed, rb.velocity.y);
 	}
 
 	void Jump()
 	{
 		if (IsGrounded())
 		{
-			GetComponent<Rigidbody2D>().AddForce(Vector2.up * playerJumpPower);
+			rb.AddForce(Vector2.up * playerJumpPower);
 		}
 	}
 
