@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 50508824269366660}
   - component: {fileID: 61773621139599900}
   - component: {fileID: 114852062188470600}
+  - component: {fileID: 114214857092443640}
   m_Layer: 0
   m_Name: Patrol Enemy
   m_TagString: PatrolEnemy
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1382443309434336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.16, y: -0.24955153, z: 0}
+  m_LocalPosition: {x: 57.96, y: -2.28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -88,6 +89,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114214857092443640
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1382443309434336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62a022ce59fb68c4d89ddebe51dfc921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killTimer: 0.1
 --- !u!114 &114852062188470600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,6 +112,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28f33586638f8e94f856b823ad93cb34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  distance: 0.5
   speed: -3
 --- !u!212 &212722848434808082
 SpriteRenderer:

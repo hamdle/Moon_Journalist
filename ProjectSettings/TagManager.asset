@@ -9,6 +9,8 @@ TagManager:
   - Platform
   - Moving Platform
   - PatrolEnemy
+  - Projectile
+  - Tilemap
   layers:
   - Default
   - TransparentFX
