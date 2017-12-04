@@ -7,20 +7,29 @@ using UnityEngine.UI;
 public class StartManager : MonoBehaviour {
 
 	public Button startButton;
+	public Button quitButton;
 
 	// Use this for initialization
 	void Start () {
-		Button btn = startButton.GetComponent<Button>();
-		btn.onClick.AddListener(TaskOnClick);
+		Button btnStart = startButton.GetComponent<Button>();
+		btnStart.onClick.AddListener(StartOnClick);
+
+		Button btnQuit = quitButton.GetComponent<Button>();
+		btnQuit.onClick.AddListener(QuitOnClick);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		bool start = Input.GetButtonDown("Submit");
+		bool quit = Input.GetButtonDown("Cancel");
 
 		if (start)
 		{
 			StartGame();
+		}
+		if (quit)
+		{
+			QuitGame();
 		}
 	}
 
@@ -29,8 +38,19 @@ public class StartManager : MonoBehaviour {
 		SceneManager.LoadScene(1);
 	}
 
-	void TaskOnClick()
+	private void QuitGame()
+	{
+		Debug.Log("QUIT");
+		Application.Quit();
+	}
+
+	void StartOnClick()
 	{
 		StartGame();
+	}
+
+	void QuitOnClick()
+	{
+		QuitGame();
 	}
 }
