@@ -22,8 +22,6 @@ public class MicrophoneThrower : MonoBehaviour {
 		
 		if (Input.GetButtonDown("Fire1"))
 		{
-			Debug.Log("player: " + rb.velocity);
-
 			// Throw force
 			Vector2 newThrowForce = new Vector2(throwForce.x * transform.localScale.x, throwForce.y);
 			Vector3 newThrowOffset = new Vector3(throwOffset.x * transform.localScale.x, throwOffset.y, 0);
