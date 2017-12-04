@@ -33,7 +33,7 @@ public class PlayerHealth : MonoBehaviour {
 
 	void Die()
 	{
-		SceneManager.LoadScene("Main");
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 
 	public void PlayerHit(int damage)
