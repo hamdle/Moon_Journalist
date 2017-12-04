@@ -102,6 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
+  flashTimer: 0.1
 --- !u!114 &114289512422043884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -114,8 +115,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coinsInThisLevel: 0
+  healthInThisLevel: 0
   coinsCollected: 0
-  leadsCollected: 0
+  healthCollected: 0
   playerHealth: {fileID: 114197705311498104}
 --- !u!114 &114596951066645042
 MonoBehaviour:
@@ -135,6 +137,9 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
+  platformLayer:
+    serializedVersion: 2
+    m_Bits: 0
   isGroundedBleed: 0
 --- !u!212 &212382622009600238
 SpriteRenderer:
@@ -169,7 +174,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 64e79780a58a0cc4798485834356a211, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
