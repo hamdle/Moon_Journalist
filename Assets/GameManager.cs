@@ -4,10 +4,27 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour {
 
-	public GameObject player;
-	
+	public static GameManager instance = null;
+
 	void Awake () {
-		DontDestroyOnLoad(player);
+
+		if (instance == null)
+		{
+			instance = this;
+		}
+		else if (instance != this)
+		{
+			Destroy(gameObject);
+		}
+
+		DontDestroyOnLoad(gameObject);
+
+		InitGame();
 	}
-	
+
+	public void InitGame()
+	{
+
+	}
+
 }
