@@ -38,9 +38,9 @@ public class PlayerMove : MonoBehaviour {
 		Vector2 rightPosition = position + (new Vector2(width / 2 + isGroundedBleed, 0));
 
 		// DEBUG
-		Debug.DrawRay(leftPosition, direction, Color.green, 5.0f);
-		Debug.DrawRay(rightPosition, direction, Color.green, 5.0f);
-		Debug.DrawRay(position, direction, Color.red, 5.0f);
+		//Debug.DrawRay(leftPosition, direction, Color.green, 5.0f);
+		//Debug.DrawRay(rightPosition, direction, Color.green, 5.0f);
+		//Debug.DrawRay(position, direction, Color.red, 5.0f);
 
 		// Check col with ground layer
 		RaycastHit2D centerHit = Physics2D.Raycast(position, direction, distance, groundLayer);

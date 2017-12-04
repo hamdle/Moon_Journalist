@@ -24,8 +24,8 @@ GameObject:
   - component: {fileID: 58453040073542460}
   - component: {fileID: 114531231048227962}
   m_Layer: 0
-  m_Name: Heart
-  m_TagString: Lead Coin
+  m_Name: Health
+  m_TagString: Health
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

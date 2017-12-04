@@ -2,14 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinCounter : MonoBehaviour {
-
-	public bool isLead = false;
+public class ItemCounter : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
 		GameObject coinHolder = GameObject.FindGameObjectWithTag("Player");
-		coinHolder.GetComponent<CoinCollector>().RegisterCoin(isLead);
+		coinHolder.GetComponent<ItemCollector>().RegisterCoin(this.gameObject.tag);
 	}
 	
 }

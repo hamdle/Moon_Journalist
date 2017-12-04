@@ -35,8 +35,9 @@ public class Patrol : MonoBehaviour {
 		RaycastHit2D centerHit = Physics2D.Raycast(position, direction, distance, groundLayer);
 		if (centerHit.collider != null)
 		{
-			Debug.DrawRay(position, direction, Color.green, 1.0f);
-			Debug.Log(centerHit.collider.tag);
+			// DEBUG
+			// Debug.DrawRay(position, direction, Color.green, 1.0f);
+
 			TurnAround();
 		}
 	}

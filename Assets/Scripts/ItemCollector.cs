@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinCollector : MonoBehaviour {
+public class ItemCollector : MonoBehaviour {
 
 	[SerializeField] private int coinsInThisLevel = 0;
-	[SerializeField] private int leadsInThisLevel = 0;
+	[SerializeField] private int healthInThisLevel = 0;
 
 	[SerializeField] int coinsCollected;
-	[SerializeField] int leadsCollected;
+	[SerializeField] int healthCollected;
 
 	[SerializeField] PlayerHealth playerHealth;
 
@@ -29,19 +29,19 @@ public class CoinCollector : MonoBehaviour {
 			coinsCollected++;
 			Destroy(collision.gameObject);
 		}
-		else if (collision.CompareTag("Lead Coin"))
+		else if (collision.CompareTag("Health"))
 		{
-			leadsCollected++;
+			healthCollected++;
 			playerHealth.HealthCollected();
 			Destroy(collision.gameObject);
 		}
 	}
 
-	public void RegisterCoin(bool isLead)
+	public void RegisterCoin(string itemTag)
 	{
-		if (!isLead)
+		if (itemTag == "Coin")
 			coinsInThisLevel++;
-		else
-			leadsInThisLevel++;
+		else if (itemTag == "Health")
+			healthInThisLevel++;
 	}
 }
