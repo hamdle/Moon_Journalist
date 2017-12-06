@@ -21,7 +21,8 @@ public class DialogManager : MonoBehaviour
 
 	public void StartDialog(Dialog dialog)
 	{
-		animator.SetBool("IsOpen", true);
+		//animator.SetBool("IsOpen", true);
+		Debug.Log("Open dialog");
 
 		nameText.text = dialog.name;
 
@@ -66,8 +67,9 @@ public class DialogManager : MonoBehaviour
 
 	void EndDialog()
 	{
-		animator.SetBool("IsOpen", false);
+		//animator.SetBool("IsOpen", false);
+		GameObject.FindGameObjectWithTag("Dialog Box").SetActive(false);
+		Debug.Log("Close dialog");
 	}
-
 
 }

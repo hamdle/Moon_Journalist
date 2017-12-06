@@ -12,6 +12,8 @@ TagManager:
   - Projectile
   - Tilemap
   - Health
+  - Dialog Manager
+  - Dialog Box
   layers:
   - Default
   - TransparentFX
