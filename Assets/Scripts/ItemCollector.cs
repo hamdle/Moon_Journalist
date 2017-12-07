@@ -12,6 +12,8 @@ public class ItemCollector : MonoBehaviour {
 
 	[SerializeField] PlayerHealth playerHealth;
 
+	[SerializeField] AudioSource coinAudioSource;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -26,6 +28,7 @@ public class ItemCollector : MonoBehaviour {
 	{
 		if (collision.CompareTag("Coin"))
 		{
+			coinAudioSource.Play();
 			coinsCollected++;
 			Destroy(collision.gameObject);
 		}

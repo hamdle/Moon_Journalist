@@ -14,6 +14,9 @@ public class PlayerMove : MonoBehaviour {
 	public LayerMask platformLayer;
 	public float isGroundedBleed = 0;
 
+	[Header("Sound Effects")]
+	public AudioSource jumpAudioSource;
+
 	float xMovement;
 	Rigidbody2D rb;
 
@@ -73,6 +76,7 @@ public class PlayerMove : MonoBehaviour {
 
 		if (jump || Input.GetKeyDown("w"))
 		{
+			jumpAudioSource.Play();
 			Jump();
 		}
 

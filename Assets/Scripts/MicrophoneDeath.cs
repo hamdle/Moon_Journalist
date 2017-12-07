@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MicrophoneDeath : MonoBehaviour {
 
+	AudioSource[] hitAudioSource;
+
 	float deathDelay = 0.5f;
 	SpriteRenderer sr;
 	Collider2D col;
@@ -16,6 +18,8 @@ public class MicrophoneDeath : MonoBehaviour {
 		sr = GetComponent<SpriteRenderer>();
 		col = GetComponent<Collider2D>();
 		currentColor = sr.color;
+
+		hitAudioSource = GetComponents<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -33,6 +37,9 @@ public class MicrophoneDeath : MonoBehaviour {
 
 	public void OnCollisionEnter2D(Collision2D collision)
 	{
+		int random = Random.Range(0, 2);
+		hitAudioSource[random].Play();
+
 		fadeOut = true;
 		col.enabled = false;
 
