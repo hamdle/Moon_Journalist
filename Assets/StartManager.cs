@@ -35,6 +35,11 @@ public class StartManager : MonoBehaviour {
 
 	private void StartGame()
 	{
+		Invoke("LoadFirstScene", 1f);
+	}
+
+	private void LoadFirstScene()
+	{
 		SceneManager.LoadScene(1);
 	}
 
