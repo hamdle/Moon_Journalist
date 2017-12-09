@@ -13,6 +13,8 @@ public class MicrophoneDeath : MonoBehaviour {
 	bool fadeOut = false;
 	float timer = 0;
 
+	bool playedDeathSound = false;
+
 	// Use this for initialization
 	void Start () {
 		sr = GetComponent<SpriteRenderer>();
@@ -37,8 +39,13 @@ public class MicrophoneDeath : MonoBehaviour {
 
 	public void OnCollisionEnter2D(Collision2D collision)
 	{
-		int random = Random.Range(0, 2);
-		hitAudioSource[random].Play();
+		if (!playedDeathSound)
+		{
+			int random = Random.Range(0, 3);
+			hitAudioSource[random].Play();
+			playedDeathSound = true;
+		}
+		
 
 		fadeOut = true;
 		col.enabled = false;
