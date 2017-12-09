@@ -15,6 +15,7 @@ public class PlayerMove : MonoBehaviour {
 	public float isGroundedBleed = 0;
 
 	[Header("Sound Effects")]
+	public AudioClip jumpSound;
 	public AudioSource jumpAudioSource;
 
 	float xMovement;
@@ -23,6 +24,8 @@ public class PlayerMove : MonoBehaviour {
 	private void Start()
 	{
 		rb = gameObject.GetComponent<Rigidbody2D>();
+
+		jumpAudioSource.clip = jumpSound;
 	}
 
 	// Update is called once per frame
@@ -76,7 +79,6 @@ public class PlayerMove : MonoBehaviour {
 
 		if (jump || Input.GetKeyDown("w"))
 		{
-			jumpAudioSource.Play();
 			Jump();
 		}
 
@@ -104,6 +106,7 @@ public class PlayerMove : MonoBehaviour {
 	{
 		if (IsGrounded())
 		{
+			jumpAudioSource.Play();
 			rb.AddForce(Vector2.up * playerJumpPower);
 		}
 	}

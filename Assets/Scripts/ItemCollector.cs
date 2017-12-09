@@ -12,11 +12,14 @@ public class ItemCollector : MonoBehaviour {
 
 	[SerializeField] PlayerHealth playerHealth;
 
-	[SerializeField] AudioSource coinAudioSource;
+	[SerializeField] AudioClip coinSound;
+	public AudioSource coinAudioSource;
+
+	[SerializeField] AudioClip healthSound;
+	public AudioSource healthAudioSource;
 
 	// Use this for initialization
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame
@@ -28,12 +31,15 @@ public class ItemCollector : MonoBehaviour {
 	{
 		if (collision.CompareTag("Coin"))
 		{
+			coinAudioSource.clip = coinSound;
 			coinAudioSource.Play();
 			coinsCollected++;
 			Destroy(collision.gameObject);
 		}
 		else if (collision.CompareTag("Health"))
 		{
+			healthAudioSource.clip = healthSound;
+			healthAudioSource.Play();
 			healthCollected++;
 			playerHealth.HealthCollected();
 			Destroy(collision.gameObject);

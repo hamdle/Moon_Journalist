@@ -10,11 +10,16 @@ public class MicrophoneThrower : MonoBehaviour {
 	public float torqueDeviation;
 	public Vector3 throwOffset;
 
+	public AudioClip throwSound;
+	public AudioSource throwAudioSource;
+
 	Rigidbody2D rb;
 
 	// Use this for initialization
 	void Start () {
 		rb = gameObject.GetComponent<Rigidbody2D>();
+
+		throwAudioSource.clip = throwSound;
 	}
 	
 	// Update is called once per frame
@@ -22,6 +27,8 @@ public class MicrophoneThrower : MonoBehaviour {
 		
 		if (Input.GetButtonDown("Fire1"))
 		{
+			throwAudioSource.Play();
+
 			// Throw force
 			Vector2 newThrowForce = new Vector2(throwForce.x * transform.localScale.x, throwForce.y);
 			Vector3 newThrowOffset = new Vector3(throwOffset.x * transform.localScale.x, throwOffset.y, 0);

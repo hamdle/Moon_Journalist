@@ -7,9 +7,16 @@ public class PlayerHealth : MonoBehaviour {
 
 	[SerializeField] int health = 0;
 	[SerializeField] [Range(0, 1)] float flashTimer = 0.1f;
+	[SerializeField] int fallDistance = -7;
 
+	public AudioClip dieSound;
+	public AudioSource dieAudioSource;
+	float dieWaitLength;
+	
 	// Use this for initialization
 	void Start () {
+		dieAudioSource.clip = dieSound;
+		dieWaitLength = dieSound.length;
 	}
 	
 	// Update is called once per frame
@@ -19,13 +26,14 @@ public class PlayerHealth : MonoBehaviour {
 
 		if (health < 0)
 		{
-			Die();
+			dieAudioSource.Play();
+			Invoke("Die", dieWaitLength);
 		}
 	}
 
 	void CheckFallDeath()
 	{
-		if (gameObject.transform.position.y < -7)
+		if (gameObject.transform.position.y < fallDistance)
 		{
 			PlayerHit(health + 1);
 		}

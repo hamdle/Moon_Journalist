@@ -8,9 +8,13 @@ public class EnemyCollision : MonoBehaviour {
 	public float hitRecoveryTime = 1.0f;
 	public bool hitRecovery = false;
 
+	public AudioClip hurtSound;
+	public AudioSource hurtAudioSource;
+
+
 	// Use this for initialization
 	void Start () {
-		
+		hurtAudioSource.clip = hurtSound;
 	}
 	
 	// Update is called once per frame
@@ -25,6 +29,7 @@ public class EnemyCollision : MonoBehaviour {
 		{
 			if (collision.gameObject.CompareTag("PatrolEnemy"))
 			{
+				hurtAudioSource.Play();
 				playerHealth.PlayerHit(1);
 				hitRecovery = true;
 				Invoke("RecoverFromHit", hitRecoveryTime);
