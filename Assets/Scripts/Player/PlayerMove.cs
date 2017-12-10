@@ -6,6 +6,7 @@ public class PlayerMove : MonoBehaviour {
 
 	public int playerSpeed = 10;
 	public bool facingRight = false;
+	public PlayerHealth health;
 
 	[Header("Jump Mechanics")]
 	public int playerJumpPower = 100;
@@ -73,6 +74,9 @@ public class PlayerMove : MonoBehaviour {
 
 	void PlayerMovement()
 	{
+		if (health.HasDied())
+			return;
+
 		// Controls
 		xMovement = Input.GetAxis("Horizontal");
 		bool jump = Input.GetButtonDown("Jump");

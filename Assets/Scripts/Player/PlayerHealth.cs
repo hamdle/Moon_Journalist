@@ -8,10 +8,12 @@ public class PlayerHealth : MonoBehaviour {
 	[SerializeField] int health = 0;
 	[SerializeField] [Range(0, 1)] float flashTimer = 0.1f;
 	[SerializeField] int fallDistance = -7;
+	[SerializeField] float resetTime;
 
 	public AudioClip dieSound;
 	public AudioSource dieAudioSource;
 	float dieWaitLength;
+	bool died = false;	// Only die once
 	
 	// Use this for initialization
 	void Start () {
@@ -26,8 +28,12 @@ public class PlayerHealth : MonoBehaviour {
 
 		if (health < 0)
 		{
-			dieAudioSource.Play();
-			Invoke("Die", dieWaitLength);
+			if (!died)
+			{
+				dieAudioSource.Play();
+				Invoke("Die", dieWaitLength + resetTime);
+				died = true;
+			}
 		}
 	}
 
@@ -42,6 +48,11 @@ public class PlayerHealth : MonoBehaviour {
 	void Die()
 	{
 		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+	}
+
+	public bool HasDied()
+	{
+		return died;
 	}
 
 	public void PlayerHit(int damage)

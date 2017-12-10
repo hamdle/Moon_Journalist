@@ -1861,6 +1861,12 @@ GameObject:
   m_PrefabParentObject: {fileID: 1903039905495246, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8,
     type: 2}
   m_PrefabInternal: {fileID: 2029045174}
+--- !u!114 &930916011 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114197705311498104, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 2029045174}
+  m_Script: {fileID: 11500000, guid: 569ec1629a06c604fbf1cc2f012f8607, type: 3}
 --- !u!4 &948172892 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4441283431382218, guid: 3633cb6e590594a4fb0014ce2f5ad460,
@@ -8273,51 +8279,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114289512422043884, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8,
+    - target: {fileID: 114596951066645042, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8,
         type: 2}
-      propertyPath: healthSound
+      propertyPath: health
       value: 
-      objectReference: {fileID: 8300000, guid: 8962513e71eb0e74db1206166041ed48, type: 3}
-    - target: {fileID: 82836279057017598, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 8962513e71eb0e74db1206166041ed48, type: 3}
-    - target: {fileID: 114231390917249330, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8,
-        type: 2}
-      propertyPath: throwSound
-      value: 
-      objectReference: {fileID: 8300000, guid: ce27c5462d273aa4eb8ba0b5785b97b8, type: 3}
-    - target: {fileID: 82168928676345030, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: ce27c5462d273aa4eb8ba0b5785b97b8, type: 3}
-    - target: {fileID: 114197705311498104, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8,
-        type: 2}
-      propertyPath: dieSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 0d02a9ace979abc43b1ad414223d6b35, type: 3}
-    - target: {fileID: 82953836671438926, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8,
-        type: 2}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 0d02a9ace979abc43b1ad414223d6b35, type: 3}
-    - target: {fileID: 82168928676345030, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8,
-        type: 2}
-      propertyPath: m_Volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 82418941396845470, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8,
-        type: 2}
-      propertyPath: m_Volume
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 82643650027326736, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8,
-        type: 2}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 930916011}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8, type: 2}
   m_IsPrefabParent: 0

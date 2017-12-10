@@ -187,9 +187,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7effe0c19991fb34bb00c4570fcfaf3d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ce27c5462d273aa4eb8ba0b5785b97b8, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -267,9 +267,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bec2ebfd6ba407345a31615624f1cef5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 955cd05d3cfaaad4bbf4f42e0f0d1908, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -348,7 +348,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: df4fb38a32ce8694cab5e143e7d12013, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -427,7 +427,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 2b3c529e276284b4db844b8f4c8f109f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 8962513e71eb0e74db1206166041ed48, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -507,7 +507,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 505c67cc34657d14c88b9202962bcdb9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 64ccfef829261404e991cf9687a65c35, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -592,7 +592,8 @@ MonoBehaviour:
   health: 1
   flashTimer: 0.1
   fallDistance: -10
-  dieSound: {fileID: 8300000, guid: 505c67cc34657d14c88b9202962bcdb9, type: 3}
+  resetTime: 0
+  dieSound: {fileID: 8300000, guid: 64ccfef829261404e991cf9687a65c35, type: 3}
   dieAudioSource: {fileID: 82953836671438926}
 --- !u!114 &114231390917249330
 MonoBehaviour:
@@ -610,7 +611,7 @@ MonoBehaviour:
   torque: -0.3
   torqueDeviation: -0.3
   throwOffset: {x: 0.69, y: 0.43, z: 0}
-  throwSound: {fileID: 8300000, guid: 7effe0c19991fb34bb00c4570fcfaf3d, type: 3}
+  throwSound: {fileID: 8300000, guid: ce27c5462d273aa4eb8ba0b5785b97b8, type: 3}
   throwAudioSource: {fileID: 82168928676345030}
 --- !u!114 &114289512422043884
 MonoBehaviour:
@@ -630,7 +631,7 @@ MonoBehaviour:
   playerHealth: {fileID: 114197705311498104}
   coinSound: {fileID: 8300000, guid: 86dd637416841704fa3f504eabf9231f, type: 3}
   coinAudioSource: {fileID: 82019282511141064}
-  healthSound: {fileID: 8300000, guid: 2b3c529e276284b4db844b8f4c8f109f, type: 3}
+  healthSound: {fileID: 8300000, guid: 8962513e71eb0e74db1206166041ed48, type: 3}
   healthAudioSource: {fileID: 82836279057017598}
 --- !u!114 &114586142756592338
 MonoBehaviour:
@@ -661,6 +662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 10
   facingRight: 0
+  health: {fileID: 0}
   playerJumpPower: 800
   isGrounded: 0
   groundLayer:
@@ -670,7 +672,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   isGroundedBleed: 0
-  jumpSound: {fileID: 8300000, guid: bec2ebfd6ba407345a31615624f1cef5, type: 3}
+  jumpSound: {fileID: 8300000, guid: 955cd05d3cfaaad4bbf4f42e0f0d1908, type: 3}
   jumpAudioSource: {fileID: 82418941396845470}
 --- !u!212 &212382622009600238
 SpriteRenderer:
