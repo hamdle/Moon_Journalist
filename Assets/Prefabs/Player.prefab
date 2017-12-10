@@ -507,7 +507,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 64ccfef829261404e991cf9687a65c35, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2cdf1a45309455b4b862ca6e9cdf118b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -593,7 +593,7 @@ MonoBehaviour:
   flashTimer: 0.1
   fallDistance: -10
   resetTime: 0
-  dieSound: {fileID: 8300000, guid: 64ccfef829261404e991cf9687a65c35, type: 3}
+  dieSound: {fileID: 8300000, guid: 2cdf1a45309455b4b862ca6e9cdf118b, type: 3}
   dieAudioSource: {fileID: 82953836671438926}
 --- !u!114 &114231390917249330
 MonoBehaviour:
@@ -662,7 +662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 10
   facingRight: 0
-  health: {fileID: 0}
+  health: {fileID: 114197705311498104}
   playerJumpPower: 800
   isGrounded: 0
   groundLayer:

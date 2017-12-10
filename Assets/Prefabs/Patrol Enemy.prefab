@@ -99,8 +99,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f2b541e2bdd095a42b888c101e525030, type: 3}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: f46f97cfc71bd0240912769b2065ea85, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   killTimer: 0.1
   flashTimer: 0.05
-  deathSound: {fileID: 8300000, guid: f2b541e2bdd095a42b888c101e525030, type: 3}
+  deathSound: {fileID: 8300000, guid: f46f97cfc71bd0240912769b2065ea85, type: 3}
   deathAudioSource: {fileID: 82821607794283982}
 --- !u!114 &114852062188470600
 MonoBehaviour:

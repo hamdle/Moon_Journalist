@@ -26,6 +26,7 @@ public class EnemyTakeDamage : MonoBehaviour {
 		{
 			// Disable all further collisions
 			collision.collider.enabled = false;
+
 			// Flash sprite to indicate hit
 			StartCoroutine(Flash(this.gameObject, flashTimer));
 			// Destroy object after killTimer seconds\
