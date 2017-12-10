@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50508824269366660}
   - component: {fileID: 61773621139599900}
   - component: {fileID: 114852062188470600}
-  - component: {fileID: 114214857092443640}
+  - component: {fileID: 114610223338186778}
   - component: {fileID: 82821607794283982}
   m_Layer: 0
   m_Name: Patrol Enemy
@@ -75,7 +75,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 6200000, guid: ffd194b6b77d0944c9c9df30e158e2f2, type: 2}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -170,7 +170,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &114214857092443640
+--- !u!114 &114610223338186778
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -181,8 +181,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62a022ce59fb68c4d89ddebe51dfc921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  killTimer: 0.1
-  flashTimer: 0.05
+  health: 1
+  killTimer: 0
+  flashTimer: 0
   deathSound: {fileID: 8300000, guid: f46f97cfc71bd0240912769b2065ea85, type: 3}
   deathAudioSource: {fileID: 82821607794283982}
 --- !u!114 &114852062188470600

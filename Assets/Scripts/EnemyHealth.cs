@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyTakeDamage : MonoBehaviour {
+public class EnemyHealth : MonoBehaviour {
 
+	public int health;
 	public float killTimer;
 	[Range(0,1)] public float flashTimer;
 
 	public AudioClip deathSound;
 	public AudioSource deathAudioSource;
 
+	bool dying = false;
+	List<int> hitIDs;
+
 	// Use this for initialization
 	void Start () {
 		deathAudioSource.clip = deathSound;
+		hitIDs = new List<int>();
 	}
 	
 	// Update is called once per frame
@@ -24,14 +29,25 @@ public class EnemyTakeDamage : MonoBehaviour {
 	{
 		if (collision.gameObject.CompareTag("Projectile"))
 		{
+			// todo this is broken
 			// Disable all further collisions
 			collision.collider.enabled = false;
 
-			// Flash sprite to indicate hit
+			// Flash sprite to indicate hit damage
 			StartCoroutine(Flash(this.gameObject, flashTimer));
-			// Destroy object after killTimer seconds\
-			deathAudioSource.Play();
-			Invoke("Kill", killTimer + deathSound.length);
+
+			if (hitIDs.Contains(collision.gameObject.GetInstanceID()))
+				health--;
+
+			if (health < 1 && !dying)
+			{
+				// Destroy object after killTimer seconds\
+				deathAudioSource.Play();
+				dying = true;
+				Invoke("Kill", killTimer + deathSound.length);
+			}
+
+			hitIDs.Add(collision.gameObject.GetInstanceID());
 		}
 	}
 
