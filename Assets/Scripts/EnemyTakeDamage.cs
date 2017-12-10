@@ -7,9 +7,12 @@ public class EnemyTakeDamage : MonoBehaviour {
 	public float killTimer;
 	[Range(0,1)] public float flashTimer;
 
+	public AudioClip deathSound;
+	public AudioSource deathAudioSource;
+
 	// Use this for initialization
 	void Start () {
-		
+		deathAudioSource.clip = deathSound;
 	}
 	
 	// Update is called once per frame
@@ -25,8 +28,9 @@ public class EnemyTakeDamage : MonoBehaviour {
 			collision.collider.enabled = false;
 			// Flash sprite to indicate hit
 			StartCoroutine(Flash(this.gameObject, flashTimer));
-			// Destroy object after killTimer seconds
-			Invoke("Kill", killTimer);
+			// Destroy object after killTimer seconds\
+			deathAudioSource.Play();
+			Invoke("Kill", killTimer + deathSound.length);
 		}
 	}
 
