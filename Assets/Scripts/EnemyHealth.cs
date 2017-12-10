@@ -25,6 +25,11 @@ public class EnemyHealth : MonoBehaviour {
 		
 	}
 
+	public bool IsDying()
+	{
+		return dying;
+	}
+
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
 		if (collision.gameObject.CompareTag("Projectile"))

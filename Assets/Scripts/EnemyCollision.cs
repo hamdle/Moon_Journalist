@@ -29,10 +29,16 @@ public class EnemyCollision : MonoBehaviour {
 		{
 			if (collision.gameObject.CompareTag("PatrolEnemy"))
 			{
-				hurtAudioSource.Play();
-				playerHealth.PlayerHit(1);
-				hitRecovery = true;
-				Invoke("RecoverFromHit", hitRecoveryTime);
+				// Make sure the enemy is not already dead
+				// Could happen if while killTimer is counting down
+				EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
+				if (!enemyHealth.IsDying())
+				{
+					hurtAudioSource.Play();
+					playerHealth.PlayerHit(1);
+					hitRecovery = true;
+					Invoke("RecoverFromHit", hitRecoveryTime);
+				}
 			}
 		}
 	}
