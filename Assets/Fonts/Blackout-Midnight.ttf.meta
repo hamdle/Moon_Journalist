@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 869a5542bf0c3ba4e88543daaa184aaa
-timeCreated: 1512456384
+guid: 0a5f9f26fd65e9d46ab49618188e3a29
+timeCreated: 1512961434
 licenseType: Free
 TrueTypeFontImporter:
   externalObjects: {}
@@ -10,10 +10,11 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: New Space
+  fontName: Blackout
   fontNames:
-  - New Space
-  fallbackFontReferences: []
+  - Blackout
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 01cfbd3bb1939104ab78d568e43b903a, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
