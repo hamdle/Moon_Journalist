@@ -540,9 +540,9 @@ MonoBehaviour:
   dialog:
     name: Pete Cactus
     sentences:
-    - Hello world!
-    - I have a few questions for you.
-    - First question. Where'd you get that sandwich?
+    - I'm the first Moon journallist.
+    - It's time to find some leads!
+    - Did that rock just look at me funny?? After it!
 --- !u!114 &114856466359330664
 MonoBehaviour:
   m_ObjectHideFlags: 1
