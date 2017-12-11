@@ -514,7 +514,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: ab5c295afbf267e44a931bf2a359f448, type: 3}
-    m_FontSize: 30
+    m_FontSize: 21
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -564,18 +564,18 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: ab5c295afbf267e44a931bf2a359f448, type: 3}
-    m_FontSize: 26
+    m_FontSize: 31
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 45
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1.19
-  m_Text: Dialog text goes here.
+    m_LineSpacing: 1.3
+  m_Text: Dialog text goes here. And even more Dialog text goes here.
 --- !u!114 &114870465406291746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -833,7 +833,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1342986925537842}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -80.475006, y: -123.06999, z: 0}
+  m_LocalPosition: {x: -80.475006, y: -118.96001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224382429887826250}
@@ -841,7 +841,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -80.475, y: -31.81}
+  m_AnchoredPosition: {x: -80.475, y: -27.7}
   m_SizeDelta: {x: 587.05, y: 118.91}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224278724599655454
@@ -908,7 +908,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1354983051800590}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -187, y: -48.260002, z: 0}
+  m_LocalPosition: {x: -187.9, y: -47.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224382429887826250}
@@ -916,7 +916,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -187, y: 43}
+  m_AnchoredPosition: {x: -187.9, y: 43.9}
   m_SizeDelta: {x: 374, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224847971319257360
