@@ -49,20 +49,11 @@ public class PlayerMove : MonoBehaviour {
 		//Debug.DrawRay(rightPosition, direction, Color.green, 5.0f);
 		//Debug.DrawRay(position, direction, Color.red, 5.0f);
 
-		// Check col with ground layer
-		RaycastHit2D centerHit = Physics2D.Raycast(position, direction, distance, groundLayer);
-		RaycastHit2D leftHit = Physics2D.Raycast(leftPosition, direction, distance, groundLayer);
-		RaycastHit2D rightHit = Physics2D.Raycast(rightPosition, direction, distance, groundLayer);
-
-		if (centerHit.collider != null || leftHit.collider != null || rightHit.collider != null)
-		{
-			return true;
-		}
-
-		// Check col with platform layer
-		centerHit = Physics2D.Raycast(position, direction, distance, platformLayer);
-		leftHit = Physics2D.Raycast(leftPosition, direction, distance, platformLayer);
-		rightHit = Physics2D.Raycast(rightPosition, direction, distance, platformLayer);
+		// Check col with DefaultRaycastLayers which is
+		// all layers except for Ignore Raycast layer
+		RaycastHit2D centerHit = Physics2D.Raycast(position, direction, distance, Physics.DefaultRaycastLayers);
+		RaycastHit2D leftHit = Physics2D.Raycast(leftPosition, direction, distance, Physics.DefaultRaycastLayers);
+		RaycastHit2D rightHit = Physics2D.Raycast(rightPosition, direction, distance, Physics.DefaultRaycastLayers);
 
 		if (centerHit.collider != null || leftHit.collider != null || rightHit.collider != null)
 		{
