@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114610223338186778}
   - component: {fileID: 82821607794283982}
   - component: {fileID: 58890472240627218}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Patrol Enemy
   m_TagString: PatrolEnemy
   m_Icon: {fileID: 0}

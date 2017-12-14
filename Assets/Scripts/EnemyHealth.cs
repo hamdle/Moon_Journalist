@@ -34,6 +34,7 @@ public class EnemyHealth : MonoBehaviour {
 	{
 		if (collision.gameObject.CompareTag("Projectile"))
 		{
+			int id = collision.gameObject.GetInstanceID();
 			// todo this is broken
 			// Disable all further collisions
 			collision.collider.enabled = false;
@@ -41,18 +42,18 @@ public class EnemyHealth : MonoBehaviour {
 			// Flash sprite to indicate hit damage
 			StartCoroutine(Flash(this.gameObject, flashTimer));
 
-			if (hitIDs.Contains(collision.gameObject.GetInstanceID()))
+			if (hitIDs.Contains(id))
 				health--;
 
 			if (health < 1 && !dying)
 			{
-				// Destroy object after killTimer seconds\
+				// Destroy object after killTimer seconds
 				deathAudioSource.Play();
 				dying = true;
 				Invoke("Kill", killTimer + deathSound.length);
 			}
 
-			hitIDs.Add(collision.gameObject.GetInstanceID());
+			hitIDs.Add(id);
 		}
 	}
 
