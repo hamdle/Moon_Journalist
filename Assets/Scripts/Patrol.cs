@@ -32,7 +32,7 @@ public class Patrol : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		position = transform.position;
-		RaycastHit2D centerHit = Physics2D.Raycast(position, direction, distance, groundLayer);
+		RaycastHit2D centerHit = Physics2D.Raycast(position, direction, distance, Physics.DefaultRaycastLayers);
 		if (centerHit.collider != null)
 		{
 			// DEBUG
