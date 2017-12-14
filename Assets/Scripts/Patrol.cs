@@ -32,7 +32,14 @@ public class Patrol : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		position = transform.position;
+
+		// Put gameObject on Non-Raycast Layer to
+		// stop from detecting hit with self
+		int l = gameObject.layer;
+		gameObject.layer = 2;
 		RaycastHit2D centerHit = Physics2D.Raycast(position, direction, distance, Physics.DefaultRaycastLayers);
+		gameObject.layer = l;
+
 		if (centerHit.collider != null)
 		{
 			// DEBUG
