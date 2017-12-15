@@ -1035,6 +1035,22 @@ Transform:
   m_PrefabParentObject: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f,
     type: 2}
   m_PrefabInternal: {fileID: 602852653}
+--- !u!1 &394454649 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1037587228428956, guid: 6d89a4c7099fcea41b2cf0faeb7494d1,
+    type: 2}
+  m_PrefabInternal: {fileID: 528568550}
+--- !u!114 &394454656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 394454649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31fc2706ce20e5b45ae16512772d421e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &428066658
 Prefab:
   m_ObjectHideFlags: 0
@@ -1227,6 +1243,10 @@ Prefab:
     - target: {fileID: 4171272708922688, guid: 6d89a4c7099fcea41b2cf0faeb7494d1, type: 2}
       propertyPath: m_RootOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1037587228428956, guid: 6d89a4c7099fcea41b2cf0faeb7494d1, type: 2}
+      propertyPath: m_Name
+      value: Rocket
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d89a4c7099fcea41b2cf0faeb7494d1, type: 2}
