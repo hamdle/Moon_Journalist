@@ -8,6 +8,9 @@ public class MissileCommand : MonoBehaviour {
 
 	[SerializeField] Vector2 fireForce;
 
+	public AudioClip fireSound;
+	public AudioSource fireAudioSource;
+
 	bool inRange = false;
 	bool fire = false;
 	bool firing = false;
@@ -18,6 +21,8 @@ public class MissileCommand : MonoBehaviour {
 	void Start () {
 		rb = gameObject.GetComponent<Rigidbody2D>();
 		other = GameObject.FindGameObjectWithTag("Player").transform;
+
+		fireAudioSource.clip = fireSound;
 	}
 	
 	// Update is called once per frame
@@ -58,7 +63,7 @@ public class MissileCommand : MonoBehaviour {
 			if (dist < launchTriggerDistance)
 			{
 				fire = true;
-				Debug.Log("HIT");
+				fireAudioSource.Play();
 			}
 		}
 	}

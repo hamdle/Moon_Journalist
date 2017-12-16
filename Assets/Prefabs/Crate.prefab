@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1199129247515330}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.1906824, y: 0.14694858, z: 0}
+  m_LocalPosition: {x: -9.992275, y: -1.7830515, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -98,7 +98,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 49f093f683cb1a44cb70ee877dfd29d5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0c288e49d3a2a7b4e9a53dd5ce137494, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -183,7 +183,7 @@ MonoBehaviour:
   health: 0
   killTimer: 0
   flashTimer: 0
-  deathSound: {fileID: 8300000, guid: 49f093f683cb1a44cb70ee877dfd29d5, type: 3}
+  deathSound: {fileID: 8300000, guid: 0c288e49d3a2a7b4e9a53dd5ce137494, type: 3}
   deathAudioSource: {fileID: 82132971358727522}
 --- !u!212 &212230827900050198
 SpriteRenderer:
