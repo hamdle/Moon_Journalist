@@ -1051,8 +1051,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31fc2706ce20e5b45ae16512772d421e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  launchDistance: 5
-  initialAngle: 11.33
+  launchTriggerDistance: 5
+  fireForce: {x: 0, y: 400}
 --- !u!1001 &428066658
 Prefab:
   m_ObjectHideFlags: 0
