@@ -31,6 +31,12 @@ public class MissileCommand : MonoBehaviour {
 		{
 			CheckTargetDistance();
 		}
+
+		// todo
+		// If coming rocket lists towards layer
+
+		// First hit after coming down causes explosion
+		// Hit while going up does not do anything (let the physics handle it)
 	}
 
 	private void FixedUpdate()
@@ -39,7 +45,7 @@ public class MissileCommand : MonoBehaviour {
 		{
 			firing = true;
 
-			rb.AddForce(fireForce);
+			rb.AddRelativeForce(fireForce);
 
 			fire = false;
 		}

@@ -1638,6 +1638,11 @@ Prefab:
       propertyPath: fireSound
       value: 
       objectReference: {fileID: 8300000, guid: b28e43c62fb9c2543a2c123dfe5801c9, type: 3}
+    - target: {fileID: 114366830693762946, guid: 6d89a4c7099fcea41b2cf0faeb7494d1,
+        type: 2}
+      propertyPath: fireForce.y
+      value: 600
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d89a4c7099fcea41b2cf0faeb7494d1, type: 2}
   m_IsPrefabParent: 0
@@ -11298,7 +11303,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3904f284e95dccb42ad0c4004fa942da,
+      objectReference: {fileID: 21300000, guid: 7b049986ace6aa84eaf4ab4fd3388a8a,
         type: 3}
     - target: {fileID: 61528995102312158, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8,
         type: 2}
