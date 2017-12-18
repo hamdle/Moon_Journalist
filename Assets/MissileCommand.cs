@@ -35,8 +35,9 @@ public class MissileCommand : MonoBehaviour {
 		// todo
 		// If coming rocket lists towards layer
 
-		// First hit after coming down causes explosion
-		// Hit while going up does not do anything (let the physics handle it)
+		// First hit after coming down will cause the bomb to explose
+
+		// Hit while going up will defuse the bomb
 	}
 
 	private void FixedUpdate()
