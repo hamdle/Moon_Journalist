@@ -447,7 +447,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -21
+  m_SortingOrder: -20
   m_Sprite: {fileID: 21300000, guid: 3d43e5c4f1001e24a910cb88e6a67a04, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2471,7 +2471,7 @@ Prefab:
     - target: {fileID: 20956502734696410, guid: ecca83927197de44da81f6c3a0c4c9e3,
         type: 2}
       propertyPath: orthographic size
-      value: 5.5
+      value: 4.375
       objectReference: {fileID: 0}
     - target: {fileID: 114831421088698978, guid: ecca83927197de44da81f6c3a0c4c9e3,
         type: 2}
@@ -10500,11 +10500,11 @@ Transform:
   - {fileID: 1901223478}
   - {fileID: 1022695343}
   - {fileID: 747689132}
-  - {fileID: 1519878343}
+  - {fileID: 331289318}
   - {fileID: 1033077944}
   - {fileID: 1168695528}
-  - {fileID: 331289318}
   - {fileID: 1547416239}
+  - {fileID: 1519878343}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11794,7 +11794,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -21
+  m_SortingOrder: -20
   m_Sprite: {fileID: 21300000, guid: 3d43e5c4f1001e24a910cb88e6a67a04, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
