@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 0f47dba265d3ff441a59fbbbcd0274b9
+timeCreated: 1513665456
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: 2Dumb
+  fontNames:
+  - 2Dumb
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
