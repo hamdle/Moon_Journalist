@@ -15,6 +15,8 @@ public class PlayerMove : MonoBehaviour {
 	public LayerMask groundLayer;
 	public LayerMask platformLayer;
 	public float isGroundedBleed = 0;
+	public int maxExtraJumps = 0;
+	public int curExtraJumps;
 
 	[Header("Sound Effects")]
 	public AudioClip jumpSound;
@@ -28,6 +30,7 @@ public class PlayerMove : MonoBehaviour {
 		rb = gameObject.GetComponent<Rigidbody2D>();
 
 		curPlayerSpeed = maxPlayerSpeed;
+		curExtraJumps = maxExtraJumps;
 
 		jumpAudioSource.clip = jumpSound;
 	}
@@ -39,6 +42,20 @@ public class PlayerMove : MonoBehaviour {
 
 	bool IsGrounded()
 	{
+		if (rb.velocity.y == 0.0f)
+		{
+			isGroundedBleed = 0f;
+			curExtraJumps = maxExtraJumps;
+		}
+		else
+		{
+			if (curExtraJumps <= 0)
+			{
+				isGroundedBleed = -0.45f;
+			}
+			curExtraJumps--;
+		}
+
 		Vector2 position = transform.position;
 		Vector2 direction = Vector2.down;
 		float distance = 1.0f;
