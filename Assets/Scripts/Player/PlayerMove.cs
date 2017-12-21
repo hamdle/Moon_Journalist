@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
 
-	public int playerSpeed = 10;
+	public float maxPlayerSpeed = 10;
+	public float curPlayerSpeed;
 	public bool facingRight = false;
 	public PlayerHealth health;
 
@@ -26,6 +27,8 @@ public class PlayerMove : MonoBehaviour {
 	{
 		rb = gameObject.GetComponent<Rigidbody2D>();
 
+		curPlayerSpeed = maxPlayerSpeed;
+
 		jumpAudioSource.clip = jumpSound;
 	}
 
@@ -45,9 +48,9 @@ public class PlayerMove : MonoBehaviour {
 		Vector2 rightPosition = position + (new Vector2(width / 2 + isGroundedBleed, 0));
 
 		// DEBUG
-		//Debug.DrawRay(leftPosition, direction, Color.green, 5.0f);
-		//Debug.DrawRay(rightPosition, direction, Color.green, 5.0f);
-		//Debug.DrawRay(position, direction, Color.red, 5.0f);
+		Debug.DrawRay(leftPosition, direction, Color.green, 5.0f);
+		Debug.DrawRay(rightPosition, direction, Color.green, 5.0f);
+		Debug.DrawRay(position, direction, Color.red, 5.0f);
 
 		// Check col with DefaultRaycastLayers which is
 		// all layers except for Ignore Raycast layer
@@ -94,7 +97,9 @@ public class PlayerMove : MonoBehaviour {
 	private void FixedUpdate()
 	{
 		// Physics
-		rb.velocity = new Vector2(xMovement * playerSpeed, rb.velocity.y);
+		rb.velocity = new Vector2(xMovement * curPlayerSpeed, rb.velocity.y);
+
+		BuildUpToMaxSpeed();
 	}
 
 	void Jump()
@@ -112,6 +117,18 @@ public class PlayerMove : MonoBehaviour {
 		Vector2 localScale = gameObject.transform.localScale;
 		localScale.x *= -1;
 		transform.localScale = localScale;
+
+		// Sapp speed
+		curPlayerSpeed = maxPlayerSpeed / 2f;
+	}
+
+	void BuildUpToMaxSpeed()
+	{
+		if (curPlayerSpeed < maxPlayerSpeed)
+		{
+			curPlayerSpeed += 0.1f;
+			Mathf.Clamp(curPlayerSpeed, 0, maxPlayerSpeed);
+		}
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
