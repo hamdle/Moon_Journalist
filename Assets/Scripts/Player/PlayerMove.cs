@@ -15,8 +15,8 @@ public class PlayerMove : MonoBehaviour {
 	public LayerMask groundLayer;
 	public LayerMask platformLayer;
 	public float isGroundedBleed = 0;
-	public int maxExtraJumps = 0;
-	public int curExtraJumps;
+
+	int extraJumps = 0;
 
 	[Header("Sound Effects")]
 	public AudioClip jumpSound;
@@ -30,7 +30,6 @@ public class PlayerMove : MonoBehaviour {
 		rb = gameObject.GetComponent<Rigidbody2D>();
 
 		curPlayerSpeed = maxPlayerSpeed;
-		curExtraJumps = maxExtraJumps;
 
 		jumpAudioSource.clip = jumpSound;
 	}
@@ -38,22 +37,27 @@ public class PlayerMove : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		PlayerMovement();
+		Debug.Log(rb.velocity.y);
 	}
 
-	bool IsGrounded()
+	bool AllowPlayerJump()
 	{
-		if (rb.velocity.y == 0.0f)
+		// If player is moving up or down
+		if (rb.velocity.y > 0.1f || rb.velocity.y < -0.1f)
 		{
-			isGroundedBleed = 0f;
-			curExtraJumps = maxExtraJumps;
+			// Allow one extra jump using collision area that
+			// is wider than player, for fun gameplay
+			if (extraJumps != 0)
+			{
+				// Restrict jump col test to player width
+				// to stop player from jump hovering on a vertical wall
+				isGroundedBleed = -0.45f;
+			}
+			extraJumps++;
 		}
 		else
 		{
-			if (curExtraJumps <= 0)
-			{
-				isGroundedBleed = -0.45f;
-			}
-			curExtraJumps--;
+			extraJumps = 0;
 		}
 
 		Vector2 position = transform.position;
@@ -63,6 +67,7 @@ public class PlayerMove : MonoBehaviour {
 
 		Vector2 leftPosition = position - (new Vector2(width / 2 + isGroundedBleed, 0));
 		Vector2 rightPosition = position + (new Vector2(width / 2 + isGroundedBleed, 0));
+		isGroundedBleed = 0f;
 
 		// DEBUG
 		Debug.DrawRay(leftPosition, direction, Color.green, 5.0f);
@@ -121,7 +126,7 @@ public class PlayerMove : MonoBehaviour {
 
 	void Jump()
 	{
-		if (IsGrounded())
+		if (AllowPlayerJump())
 		{
 			jumpAudioSource.Play();
 			rb.AddForce(Vector2.up * playerJumpPower);
