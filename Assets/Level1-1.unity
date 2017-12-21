@@ -1000,8 +1000,7 @@ Prefab:
       propertyPath: m_Name
       value: Solid Crate (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114480672986632658, guid: 703cfac2c76e0fe47aee8b7ac71ed443, type: 2}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 703cfac2c76e0fe47aee8b7ac71ed443, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &174700782
@@ -1373,7 +1372,7 @@ Prefab:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114480672986632658, guid: 703cfac2c76e0fe47aee8b7ac71ed443, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 703cfac2c76e0fe47aee8b7ac71ed443, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &295618810
@@ -8390,6 +8389,15 @@ Tilemap:
       m_ObjectToInstantiate: {fileID: 0}
       m_TileFlags: 1
       m_ColliderType: 1
+  - first: {x: 45, y: 0, z: 0}
+    second:
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
   - first: {x: 48, y: 0, z: 0}
     second:
       m_TileIndex: 1
@@ -8697,6 +8705,15 @@ Tilemap:
       m_TileFlags: 1
       m_ColliderType: 1
   - first: {x: -9, y: 1, z: 0}
+    second:
+      m_TileIndex: 1
+      m_TileSpriteIndex: 1
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_ObjectToInstantiate: {fileID: 0}
+      m_TileFlags: 1
+      m_ColliderType: 1
+  - first: {x: 45, y: 1, z: 0}
     second:
       m_TileIndex: 1
       m_TileSpriteIndex: 1
@@ -9051,15 +9068,15 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 754
+  - m_RefCount: 756
     m_Data: {fileID: 11400000, guid: 4b094e35b3f1a22449afed59bbb25b6a, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 754
+  - m_RefCount: 756
     m_Data: {fileID: 21300000, guid: 2e63be96ed63a054e96e81f002547aeb, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 754
+  - m_RefCount: 756
     m_Data:
       e00: 1
       e01: 0
@@ -9078,7 +9095,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 754
+  - m_RefCount: 756
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -9385,7 +9402,7 @@ Prefab:
       value: Solid Crate (2)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114480672986632658, guid: 703cfac2c76e0fe47aee8b7ac71ed443, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 703cfac2c76e0fe47aee8b7ac71ed443, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &768901577
@@ -10758,7 +10775,7 @@ Prefab:
       value: Solid Crate (3)
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 114480672986632658, guid: 703cfac2c76e0fe47aee8b7ac71ed443, type: 2}
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: 703cfac2c76e0fe47aee8b7ac71ed443, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1255223529 stripped
@@ -12158,7 +12175,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4273309025496294, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 46.44
+      value: -0.72
       objectReference: {fileID: 0}
     - target: {fileID: 4273309025496294, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8, type: 2}
       propertyPath: m_LocalPosition.y

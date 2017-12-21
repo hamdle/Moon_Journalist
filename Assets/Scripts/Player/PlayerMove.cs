@@ -37,7 +37,6 @@ public class PlayerMove : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		PlayerMovement();
-		Debug.Log(rb.velocity.y);
 	}
 
 	bool AllowPlayerJump()
