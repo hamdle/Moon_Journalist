@@ -633,7 +633,6 @@ MonoBehaviour:
   coinAudioSource: {fileID: 82019282511141064}
   healthSound: {fileID: 8300000, guid: 8962513e71eb0e74db1206166041ed48, type: 3}
   healthAudioSource: {fileID: 82836279057017598}
-  itemCollectorDisplay: {fileID: 0}
 --- !u!114 &114586142756592338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -663,6 +662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPlayerSpeed: 8.7
   curPlayerSpeed: 0
+  buildToSpeedFactor: 0.2
   facingRight: 0
   health: {fileID: 114197705311498104}
   playerJumpPower: 755

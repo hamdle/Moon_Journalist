@@ -6,6 +6,7 @@ public class PlayerMove : MonoBehaviour {
 
 	public float maxPlayerSpeed = 10;
 	public float curPlayerSpeed;
+	public float buildToSpeedFactor = 0.2f;
 	public bool facingRight = false;
 	public PlayerHealth health;
 
@@ -147,7 +148,8 @@ public class PlayerMove : MonoBehaviour {
 	{
 		if (curPlayerSpeed < maxPlayerSpeed)
 		{
-			curPlayerSpeed += 0.1f;
+			// Build speed back up
+			curPlayerSpeed += buildToSpeedFactor;
 			Mathf.Clamp(curPlayerSpeed, 0, maxPlayerSpeed);
 		}
 	}
