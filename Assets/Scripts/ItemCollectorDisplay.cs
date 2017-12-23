@@ -1,12 +1,15 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ItemCollectorDisplay : MonoBehaviour {
 
+	public ItemCollector itemCollector;
+	public PlayerHealth playerHealth;
 	public Text coinText;
-	//public Text hearts;
+	public Text healthText;
 
 	// Use this for initialization
 	void Start () {
@@ -14,11 +17,17 @@ public class ItemCollectorDisplay : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		UpdateCoinsDisplay();
+		UpdateHealthDisplay();
 	}
 
-	public void UpdateCoins(int coins)
+	private void UpdateCoinsDisplay()
 	{
-		coinText.text = coins.ToString();
+		coinText.text = itemCollector.GetCoins().ToString();
+	}
+
+	private void UpdateHealthDisplay()
+	{
+		healthText.text = playerHealth.GetHealth().ToString();
 	}
 }

@@ -18,8 +18,6 @@ public class ItemCollector : MonoBehaviour {
 	[SerializeField] AudioClip healthSound;
 	public AudioSource healthAudioSource;
 
-	public ItemCollectorDisplay itemCollectorDisplay;
-
 	// Use this for initialization
 	void Start () {
 	}
@@ -36,7 +34,7 @@ public class ItemCollector : MonoBehaviour {
 			coinAudioSource.clip = coinSound;
 			coinAudioSource.Play();
 			coinsCollected++;
-			itemCollectorDisplay.UpdateCoins(coinsCollected);
+
 			Destroy(collision.gameObject);
 		}
 		else if (collision.CompareTag("Health"))
@@ -44,7 +42,9 @@ public class ItemCollector : MonoBehaviour {
 			healthAudioSource.clip = healthSound;
 			healthAudioSource.Play();
 			healthCollected++;
+			// Notify player health
 			playerHealth.HealthCollected();
+
 			Destroy(collision.gameObject);
 		}
 	}
@@ -55,5 +55,10 @@ public class ItemCollector : MonoBehaviour {
 			coinsInThisLevel++;
 		else if (itemTag == "Health")
 			healthInThisLevel++;
+	}
+
+	public int GetCoins()
+	{
+		return coinsCollected;
 	}
 }

@@ -78,4 +78,9 @@ public class PlayerHealth : MonoBehaviour {
 	{
 		health++;
 	}
+
+	public int GetHealth()
+	{
+		return health;
+	}
 }
