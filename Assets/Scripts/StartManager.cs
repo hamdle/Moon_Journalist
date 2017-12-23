@@ -8,6 +8,7 @@ public class StartManager : MonoBehaviour {
 
 	public Button startButton;
 	public Button quitButton;
+	public Button optionsButton;
 
 	// Use this for initialization
 	void Start () {
@@ -16,6 +17,9 @@ public class StartManager : MonoBehaviour {
 
 		Button btnQuit = quitButton.GetComponent<Button>();
 		btnQuit.onClick.AddListener(QuitOnClick);
+
+		Button btnOptions = optionsButton.GetComponent<Button>();
+		btnOptions.onClick.AddListener(OptionsOnClick);
 	}
 	
 	// Update is called once per frame
@@ -49,6 +53,12 @@ public class StartManager : MonoBehaviour {
 		Application.Quit();
 	}
 
+	private void OptionsGame()
+	{
+		Debug.Log("OPTIONS");
+		// todo show optiosn menu
+	}
+
 	void StartOnClick()
 	{
 		StartGame();
@@ -57,5 +67,10 @@ public class StartManager : MonoBehaviour {
 	void QuitOnClick()
 	{
 		QuitGame();
+	}
+
+	void OptionsOnClick()
+	{
+		OptionsGame();
 	}
 }
