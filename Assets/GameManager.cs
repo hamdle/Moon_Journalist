@@ -36,12 +36,14 @@ public class GameManager : MonoBehaviour {
 			// Turn sound off
 			AudioListener.volume = 0.0f;
 			soundOn = false;
+			Debug.Log("MUTE");
 		}
 		else
 		{
 			// Turn sound on
 			AudioListener.volume = 1.0f;
-			soundOn = false;
+			soundOn = true;
+			Debug.Log("UNMUTE");
 		}
 	}
 
