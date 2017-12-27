@@ -81,7 +81,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1568990457218838
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,7 +353,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: e300396c0517c8b479c36dd5867d442c, type: 3}
+    m_Font: {fileID: 12800000, guid: 3a97586598c46594e947985913bdc938, type: 3}
     m_FontSize: 31
     m_FontStyle: 0
     m_BestFit: 0
@@ -660,8 +660,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameUIObject: {fileID: 1023168444991958}
-  oscillationDistance: 5
-  speed: 25
+  oscillationDistance: 4
+  speed: 8
 --- !u!114 &114848989799010622
 MonoBehaviour:
   m_ObjectHideFlags: 1
