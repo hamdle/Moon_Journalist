@@ -1538,8 +1538,8 @@ GameObject:
   - component: {fileID: 385235463}
   - component: {fileID: 385235462}
   - component: {fileID: 385235465}
-  - component: {fileID: 385235461}
   - component: {fileID: 385235464}
+  - component: {fileID: 385235461}
   m_Layer: 0
   m_Name: rocket-v1 (1)
   m_TagString: Untagged
