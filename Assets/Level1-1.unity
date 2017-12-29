@@ -1861,16 +1861,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 61100400194688288, guid: c2a1118dc2eec0a42b8bc9d8fc64607e,
+    - target: {fileID: 198221455322052018, guid: c2a1118dc2eec0a42b8bc9d8fc64607e,
         type: 2}
-      propertyPath: m_IsTrigger
-      value: 1
+      propertyPath: randomSeed
+      value: 429471319
       objectReference: {fileID: 0}
-    - target: {fileID: 199790665391107116, guid: c2a1118dc2eec0a42b8bc9d8fc64607e,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2a1118dc2eec0a42b8bc9d8fc64607e, type: 2}
   m_IsPrefabParent: 0
@@ -10726,17 +10721,6 @@ Prefab:
       propertyPath: m_Name
       value: Flower (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 212570042240664550, guid: c2a1118dc2eec0a42b8bc9d8fc64607e,
-        type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 9be824168adf8c649a57b0cb0cd2a28a,
-        type: 3}
-    - target: {fileID: 199790665391107116, guid: c2a1118dc2eec0a42b8bc9d8fc64607e,
-        type: 2}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c2a1118dc2eec0a42b8bc9d8fc64607e, type: 2}
   m_IsPrefabParent: 0
