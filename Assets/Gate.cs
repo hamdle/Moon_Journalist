@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Gate : MonoBehaviour {
 
@@ -16,12 +17,21 @@ public class Gate : MonoBehaviour {
 
 	public Camera mainCamera;
 	public float sizeStep;
+
+	public Canvas clearCanvas;
+	private Text clearText;
 	bool zoomIn = false;
 
+	private void Awake()
+	{
+		gameObject.GetComponent<ParticleSystem>().Play();
+	}
 	// Use this for initialization
 	void Start () {
 		gateAudioSource.clip = gateSound;
 		melodyAudioSource.clip = melodySound;
+
+		clearCanvas.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -48,6 +58,8 @@ public class Gate : MonoBehaviour {
 			melodyAudioSource.Play();
 			playerMove.DisableMove();
 			zoomIn = true;
+			clearCanvas.enabled = true;
+			clearText = gameObject.GetComponent<Text>();
 			//SceneManager.LoadScene(getSceneIndex());
 		}
 	}
