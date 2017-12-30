@@ -14,6 +14,10 @@ public class Gate : MonoBehaviour {
 	public AudioSource gateAudioSource;
 	public AudioSource melodyAudioSource;
 
+	public Camera mainCamera;
+	public float sizeStep;
+	bool zoomIn = false;
+
 	// Use this for initialization
 	void Start () {
 		gateAudioSource.clip = gateSound;
@@ -22,7 +26,16 @@ public class Gate : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (zoomIn)
+		{
+			mainCamera.orthographicSize -= sizeStep * Time.deltaTime;
+		}
+
+		if (mainCamera.orthographicSize < 0)
+		{
+			mainCamera.orthographicSize = 0;
+			SceneManager.LoadScene(getSceneIndex());
+		}
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
@@ -34,6 +47,7 @@ public class Gate : MonoBehaviour {
 			gateAudioSource.Play();
 			melodyAudioSource.Play();
 			playerMove.DisableMove();
+			zoomIn = true;
 			//SceneManager.LoadScene(getSceneIndex());
 		}
 	}
