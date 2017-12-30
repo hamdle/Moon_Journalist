@@ -7,9 +7,17 @@ public class Gate : MonoBehaviour {
 
 	public int sceneIndex = -1;
 
+	public PlayerMove playerMove;
+
+	public AudioClip gateSound;
+	public AudioClip melodySound;
+	public AudioSource gateAudioSource;
+	public AudioSource melodyAudioSource;
+
 	// Use this for initialization
 	void Start () {
-		
+		gateAudioSource.clip = gateSound;
+		melodyAudioSource.clip = melodySound;
 	}
 	
 	// Update is called once per frame
@@ -23,7 +31,10 @@ public class Gate : MonoBehaviour {
 		{
 			// Load next level
 			Debug.Log("Gate");
-			SceneManager.LoadScene(getSceneIndex());
+			gateAudioSource.Play();
+			melodyAudioSource.Play();
+			playerMove.DisableMove();
+			//SceneManager.LoadScene(getSceneIndex());
 		}
 	}
 

@@ -25,6 +25,7 @@ public class PlayerMove : MonoBehaviour {
 
 	float xMovement;
 	Rigidbody2D rb;
+	bool disableMove = false;
 
 	private void Start()
 	{
@@ -38,6 +39,36 @@ public class PlayerMove : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		PlayerMovement();
+	}
+
+	private void FixedUpdate()
+	{
+		if (disableMove)
+			xMovement = 0f;
+		// Physics
+		rb.velocity = new Vector2(xMovement * curPlayerSpeed, rb.velocity.y);
+
+		BuildUpToMaxSpeed();
+	}
+
+	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		if (collision.collider.name == "Tilemap_ground")
+		{
+			isGrounded = true;
+		}
+		if (collision.gameObject.CompareTag("Moving Platform"))
+		{
+			isGrounded = true;
+		}
+	}
+
+	public void DisableMove()
+	{
+		disableMove = true;
+		rb.velocity = new Vector2(0f, rb.velocity.y);
+		//rb.angularDrag = 0f;
+		//rb.isKinematic = true;
 	}
 
 	bool AllowPlayerJump()
@@ -90,7 +121,7 @@ public class PlayerMove : MonoBehaviour {
 
 	void PlayerMovement()
 	{
-		if (health.HasDied())
+		if (health.HasDied() || disableMove)
 			return;
 
 		// Controls
@@ -114,14 +145,6 @@ public class PlayerMove : MonoBehaviour {
 			FlipPlayer();
 		}
 
-	}
-
-	private void FixedUpdate()
-	{
-		// Physics
-		rb.velocity = new Vector2(xMovement * curPlayerSpeed, rb.velocity.y);
-
-		BuildUpToMaxSpeed();
 	}
 
 	void Jump()
@@ -154,15 +177,4 @@ public class PlayerMove : MonoBehaviour {
 		}
 	}
 
-	private void OnCollisionEnter2D(Collision2D collision)
-	{
-		if (collision.collider.name == "Tilemap_ground")
-		{
-			isGrounded = true;
-		}
-		if (collision.gameObject.CompareTag("Moving Platform"))
-		{
-			isGrounded = true;
-		}
-	}
 }
