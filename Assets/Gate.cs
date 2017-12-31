@@ -72,10 +72,12 @@ public class Gate : MonoBehaviour {
 		{
 			return 0;
 		}
+		/* doesnt have correct count?
 		if (sceneIndex > SceneManager.sceneCount)
 		{
 			return 0;
 		}
+		*/
 
 		return sceneIndex;
 	}
