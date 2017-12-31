@@ -15,6 +15,7 @@ TagManager:
   - Dialog Manager
   - Dialog Box
   - Crate
+  - Health Icon
   layers:
   - Default
   - TransparentFX

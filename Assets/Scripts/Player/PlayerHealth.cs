@@ -26,7 +26,7 @@ public class PlayerHealth : MonoBehaviour {
 
 		CheckFallDeath();
 
-		if (health < 0)
+		if (health < 1)
 		{
 			if (!died)
 			{
