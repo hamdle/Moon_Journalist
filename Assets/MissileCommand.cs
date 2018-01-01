@@ -118,10 +118,18 @@ public class MissileCommand : MonoBehaviour {
 			else
 			{
 				Debug.Log("EXPLODE");
+				// Create an Explosion object instance
 				GameObject exp = Instantiate(explosion, gameObject.transform);
+				// Set the explosion object outside of this object
+				// So it persist when this object is destoryed
 				exp.transform.SetParent(gameObject.transform.parent);
+				// Grab the audio source and play a sound
+				AudioSource expAudioSource = exp.GetComponent<AudioSource>();
+				expAudioSource.Play();
+				// Grab the particle system and play the effect
 				ParticleSystem ps = exp.GetComponent<ParticleSystem>();
 				ps.Play();
+
 				exploding = true;
 				Destroy(gameObject);
 			}
