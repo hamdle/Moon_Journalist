@@ -113,11 +113,10 @@ public class MissileCommand : MonoBehaviour {
 		{
 			if (collision.gameObject.CompareTag("Projectile"))
 			{
-				Debug.Log("HIT NOT EXPLODING");
+				// Don't blow up the rocket - Let physics do its thing
 			}
 			else
 			{
-				Debug.Log("EXPLODE");
 				// Create an Explosion object instance
 				GameObject exp = Instantiate(explosion, gameObject.transform);
 				// Set the explosion object outside of this object
@@ -129,9 +128,15 @@ public class MissileCommand : MonoBehaviour {
 				// Grab the particle system and play the effect
 				ParticleSystem ps = exp.GetComponent<ParticleSystem>();
 				ps.Play();
-
+				// Set as exploding and destroy rocket
 				exploding = true;
 				Destroy(gameObject);
+
+				// todo
+				// test collision in a radius around the explosion
+				// 1 - hurt player health
+				// 2 - break boxes
+				// 3 - kill moon rocks
 			}
 		}
 	}
