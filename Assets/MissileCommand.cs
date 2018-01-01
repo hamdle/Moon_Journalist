@@ -11,9 +11,12 @@ public class MissileCommand : MonoBehaviour {
 	public AudioClip fireSound;
 	public AudioSource fireAudioSource;
 
+	public GameObject explosion;
+
 	bool inRange = false;
 	bool fire = false;
 	bool firing = false;
+	bool exploding = false;
 	Transform other;
 	Rigidbody2D rb;
 	ParticleSystem fireParticles;
@@ -105,7 +108,18 @@ public class MissileCommand : MonoBehaviour {
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		// Todo: explode
+		// Must have fired to exploxe
+		if (firing && !exploding)
+		{
+			Debug.Log("EXPLODE");
+			// collision.gameObject.CompareTag("Tilemap");
+			GameObject exp = Instantiate(explosion, gameObject.transform);
+			exp.transform.SetParent(gameObject.transform.parent);
+			ParticleSystem ps = exp.GetComponent<ParticleSystem>();
+			ps.Play();
+			exploding = true;
+			Destroy(gameObject);
+		}
 	}
 
 	void CheckTargetDistance()
