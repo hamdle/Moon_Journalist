@@ -228,6 +228,7 @@ MonoBehaviour:
   fireForce: {x: 0, y: 600}
   fireSound: {fileID: 8300000, guid: b28e43c62fb9c2543a2c123dfe5801c9, type: 3}
   fireAudioSource: {fileID: 82987195911958420}
+  explosion: {fileID: 1367180174004414, guid: 9ae05190a72e5cf4e8b6c049b0ff7656, type: 2}
 --- !u!198 &198443228259458858
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -288,7 +289,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1645698721
+  randomSeed: -337026440
   InitialModule:
     serializedVersion: 3
     enabled: 1

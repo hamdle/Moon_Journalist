@@ -13065,17 +13065,6 @@ Prefab:
       propertyPath: m_Name
       value: Rocket (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 198443228259458858, guid: 6d89a4c7099fcea41b2cf0faeb7494d1,
-        type: 2}
-      propertyPath: randomSeed
-      value: -1059400590
-      objectReference: {fileID: 0}
-    - target: {fileID: 114366830693762946, guid: 6d89a4c7099fcea41b2cf0faeb7494d1,
-        type: 2}
-      propertyPath: explosion
-      value: 
-      objectReference: {fileID: 1367180174004414, guid: 9ae05190a72e5cf4e8b6c049b0ff7656,
-        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d89a4c7099fcea41b2cf0faeb7494d1, type: 2}
   m_IsPrefabParent: 0

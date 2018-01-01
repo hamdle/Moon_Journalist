@@ -111,14 +111,20 @@ public class MissileCommand : MonoBehaviour {
 		// Must have fired to exploxe
 		if (firing && !exploding)
 		{
-			Debug.Log("EXPLODE");
-			// collision.gameObject.CompareTag("Tilemap");
-			GameObject exp = Instantiate(explosion, gameObject.transform);
-			exp.transform.SetParent(gameObject.transform.parent);
-			ParticleSystem ps = exp.GetComponent<ParticleSystem>();
-			ps.Play();
-			exploding = true;
-			Destroy(gameObject);
+			if (collision.gameObject.CompareTag("Projectile"))
+			{
+				Debug.Log("HIT NOT EXPLODING");
+			}
+			else
+			{
+				Debug.Log("EXPLODE");
+				GameObject exp = Instantiate(explosion, gameObject.transform);
+				exp.transform.SetParent(gameObject.transform.parent);
+				ParticleSystem ps = exp.GetComponent<ParticleSystem>();
+				ps.Play();
+				exploding = true;
+				Destroy(gameObject);
+			}
 		}
 	}
 
