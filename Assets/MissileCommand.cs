@@ -16,14 +16,19 @@ public class MissileCommand : MonoBehaviour {
 	bool firing = false;
 	Transform other;
 	Rigidbody2D rb;
+	ParticleSystem fireParticles;
 
 	// Track stages of the rocket launch
 	bool fallingBackDown = false;
 
 	// Use this for initialization
 	void Start () {
-		rb = gameObject.GetComponent<Rigidbody2D>();
+		rb = GetComponent<Rigidbody2D>();
 		other = GameObject.FindGameObjectWithTag("Player").transform;
+		fireParticles = GetComponent<ParticleSystem>();
+		ParticleSystem.MainModule main = fireParticles.main;
+		main.simulationSpace = ParticleSystemSimulationSpace.World;
+		fireParticles.Stop();
 		fireAudioSource.clip = fireSound;
 	}
 	
@@ -45,6 +50,7 @@ public class MissileCommand : MonoBehaviour {
 			{
 				fallingBackDown = true;
 				transform.localScale = new Vector3(transform.localScale.x, -transform.localScale.y, transform.localScale.z);
+				fireParticles.Stop();
 			}
 		}
 
@@ -55,7 +61,7 @@ public class MissileCommand : MonoBehaviour {
 			float x = transform.position.x;
 			float px = other.transform.position.x;
 			// Start with a base of 1
-			float moveFactor = 1f;
+			float moveFactor = 2f;
 			int moveFactorStep = 4;
 
 			if (x > px)
@@ -81,6 +87,7 @@ public class MissileCommand : MonoBehaviour {
 
 			rb.AddRelativeForce(fireForce);
 
+			fireParticles.Play();
 			// The rocket has been fired
 			fire = false;
 		}
