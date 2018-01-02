@@ -52,7 +52,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1367180174004414}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -171,6 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33902762ce43d0e4996f0502164ee62e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  killTimer: 4
 --- !u!198 &198080194195897622
 ParticleSystem:
   m_ObjectHideFlags: 1

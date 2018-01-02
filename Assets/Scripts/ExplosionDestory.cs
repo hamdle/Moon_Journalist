@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class ExplosionDestory : MonoBehaviour {
 
+	public float killTimer = 4f;
+
 	// Use this for initialization
 	void Start () {
-		
+		Invoke("KillSelf", killTimer);
 	}
 	
 	// Update is called once per frame
@@ -29,5 +31,10 @@ public class ExplosionDestory : MonoBehaviour {
 			EnemyCollision enemyCollision = collision.gameObject.GetComponent<EnemyCollision>();
 			enemyCollision.RemoveHitPoints();
 		}
+	}
+
+	private void KillSelf()
+	{
+		Destroy(gameObject);
 	}
 }
