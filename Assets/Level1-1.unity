@@ -274,7 +274,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4383097326746392, guid: ca507b6963c65464283bedc2de66a520, type: 2}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 224937310317183092, guid: ca507b6963c65464283bedc2de66a520,
         type: 2}
@@ -10371,7 +10371,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &761976166
 MonoBehaviour:
@@ -10803,7 +10803,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4549279640570976, guid: 0f49ef26e3e04cd4c89e8a46f8faca99, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 114737741740508000, guid: 0f49ef26e3e04cd4c89e8a46f8faca99,
         type: 2}
@@ -11261,7 +11261,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -194399021
+  randomSeed: -1421379470
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -14749,7 +14749,7 @@ Transform:
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1108706926 stripped
 GameObject:

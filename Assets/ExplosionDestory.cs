@@ -16,16 +16,16 @@ public class ExplosionDestory : MonoBehaviour {
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		Debug.Log(collision.tag);
 		if (collision.tag.Equals("Crate") || collision.tag.Equals("PatrolEnemy"))
 		{
-			// break it
+			// Destory it
 			EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
 			enemyHealth.StartKill();
 		}
 
 		if (collision.tag.Equals("Player"))
 		{
+			// Remove health
 			EnemyCollision enemyCollision = collision.gameObject.GetComponent<EnemyCollision>();
 			enemyCollision.RemoveHitPoints();
 		}

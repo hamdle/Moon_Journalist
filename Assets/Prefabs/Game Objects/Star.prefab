@@ -346,6 +346,7 @@ MonoBehaviour:
   melodyAudioSource: {fileID: 82651029635262354}
   mainCamera: {fileID: 0}
   sizeStep: 1.5
+  clearCanvas: {fileID: 0}
 --- !u!198 &198427162551990610
 ParticleSystem:
   m_ObjectHideFlags: 1
