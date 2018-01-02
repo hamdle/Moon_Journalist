@@ -22,6 +22,17 @@ public class EnemyCollision : MonoBehaviour {
 		
 	}
 
+	public void RemoveHitPoints(int points = 1)
+	{
+		if (!hitRecovery)
+		{
+			hurtAudioSource.Play();
+			playerHealth.PlayerHit(points);
+			hitRecovery = true;
+			Invoke("RecoverFromHit", hitRecoveryTime);
+		}
+	}
+
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
 		// If we havent been hit recently
@@ -34,10 +45,7 @@ public class EnemyCollision : MonoBehaviour {
 				EnemyHealth enemyHealth = collision.gameObject.GetComponent<EnemyHealth>();
 				if (!enemyHealth.IsDying())
 				{
-					hurtAudioSource.Play();
-					playerHealth.PlayerHit(1);
-					hitRecovery = true;
-					Invoke("RecoverFromHit", hitRecoveryTime);
+					RemoveHitPoints();
 				}
 			}
 		}

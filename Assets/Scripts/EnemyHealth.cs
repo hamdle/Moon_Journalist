@@ -30,6 +30,14 @@ public class EnemyHealth : MonoBehaviour {
 		return dying;
 	}
 
+	public void StartKill()
+	{
+		// Destroy object after killTimer seconds
+		deathAudioSource.Play();
+		dying = true;
+		Invoke("Kill", killTimer + deathSound.length);
+	}
+
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
 		if (collision.gameObject.CompareTag("Projectile"))
@@ -47,10 +55,7 @@ public class EnemyHealth : MonoBehaviour {
 
 			if (health < 1 && !dying)
 			{
-				// Destroy object after killTimer seconds
-				deathAudioSource.Play();
-				dying = true;
-				Invoke("Kill", killTimer + deathSound.length);
+				StartKill();
 			}
 
 			hitIDs.Add(id);

@@ -16,6 +16,8 @@ TagManager:
   - Dialog Box
   - Crate
   - Health Icon
+  - Solid Crate
+  - Rotating Platform
   layers:
   - Default
   - TransparentFX

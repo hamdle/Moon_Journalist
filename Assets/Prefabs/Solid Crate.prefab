@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 61214120612840198}
   m_Layer: 9
   m_Name: Solid Crate
-  m_TagString: Untagged
+  m_TagString: Solid Crate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
