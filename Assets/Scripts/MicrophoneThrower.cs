@@ -13,6 +13,8 @@ public class MicrophoneThrower : MonoBehaviour {
 	public AudioClip throwSound;
 	public AudioSource throwAudioSource;
 
+	public GameObject dialogBox;
+
 	Rigidbody2D rb;
 
 	// Use this for initialization
@@ -24,9 +26,13 @@ public class MicrophoneThrower : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 		if (Input.GetButtonDown("Fire1"))
 		{
+			// Leave if we are waiting on the user to hit the dialog box
+			if (dialogBox.gameObject.activeInHierarchy)
+				return;
+
 			throwAudioSource.Play();
 
 			// Throw force
