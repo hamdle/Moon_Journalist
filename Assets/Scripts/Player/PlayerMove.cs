@@ -111,6 +111,8 @@ public class PlayerMove : MonoBehaviour {
 		RaycastHit2D leftHit = Physics2D.Raycast(leftPosition, direction, distance, Physics.DefaultRaycastLayers);
 		RaycastHit2D rightHit = Physics2D.Raycast(rightPosition, direction, distance, Physics.DefaultRaycastLayers);
 
+		// If any colliders have a hit, there is ground under the player
+		// so allow player to jump
 		if (centerHit.collider != null || leftHit.collider != null || rightHit.collider != null)
 		{
 			return true;
