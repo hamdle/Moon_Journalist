@@ -77,12 +77,16 @@ public class DialogManager : MonoBehaviour
 		GameObject.FindGameObjectWithTag("Dialog Box").SetActive(false);
 		// Let process dialog know this dialog has been processed
 		dialogProcessor.DialogEnded();
-
-		//Debug.Log("Close dialog");
+		// Turn time back on
+		Time.timeScale = 1.0f;
 	}
 
 	private void OpenDialog()
 	{
+		// Turn off time to pause the game objects
+		Time.timeScale = 0.0f;
+
+		// show the dialog box
 		dialogBox.SetActive(!dialogBox.activeInHierarchy);
 	}
 
