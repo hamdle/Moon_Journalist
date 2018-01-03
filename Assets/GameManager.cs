@@ -5,8 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
 	public static GameManager instance = null;
-
-	private bool dialogOpen;
+	
 	private bool soundOn;
 
 	void Awake () {
@@ -28,7 +27,6 @@ public class GameManager : MonoBehaviour {
 	public void InitGame()
 	{
 		soundOn = true;
-		dialogOpen = false;
 	}
 
 	public void ToggleSound()
@@ -48,10 +46,4 @@ public class GameManager : MonoBehaviour {
 			Debug.Log("UNMUTE");
 		}
 	}
-
-	public void ToggleDialog()
-	{
-		dialogOpen = !dialogOpen;
-	}
-
 }
