@@ -75,7 +75,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1728595031483096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 239.57, y: 1.26, z: 0}
+  m_LocalPosition: {x: -0.18769073, y: -0.0044982433, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224937310317183092}
@@ -293,11 +293,11 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 3a97586598c46594e947985913bdc938, type: 3}
-    m_FontSize: 78
+    m_Font: {fileID: 12800000, guid: e300396c0517c8b479c36dd5867d442c, type: 3}
+    m_FontSize: 68
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 6
     m_MaxSize: 123
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -345,8 +345,8 @@ MonoBehaviour:
   gateAudioSource: {fileID: 82312652078667650}
   melodyAudioSource: {fileID: 82651029635262354}
   mainCamera: {fileID: 0}
-  sizeStep: 1.5
-  clearCanvas: {fileID: 0}
+  sizeStep: 0.5
+  clearCanvas: {fileID: 223299397457105324}
 --- !u!198 &198427162551990610
 ParticleSystem:
   m_ObjectHideFlags: 1

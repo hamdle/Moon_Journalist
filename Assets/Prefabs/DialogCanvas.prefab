@@ -417,6 +417,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b845530ecf4e7204ca7ae717f8985050, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogBox: {fileID: 1841525164841648}
+  dialogProcessor: {fileID: 0}
   nameText: {fileID: 114702782185077518}
   dialogText: {fileID: 114856466359330664}
   animator: {fileID: 0}
