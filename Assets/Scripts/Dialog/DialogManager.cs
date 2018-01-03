@@ -13,6 +13,9 @@ public class DialogManager : MonoBehaviour
 
 	public Animator animator;
 
+	public PixelPerfectCamera ppc;
+	private bool zoomCamera = false;
+
 	private Queue<string> sentences;
 	private bool stopTime = true;
 
@@ -22,11 +25,19 @@ public class DialogManager : MonoBehaviour
 		sentences = new Queue<string>();
 	}
 
-	public void StartDialog(Dialog dialog, bool freezeGame)
+	public void StartDialog(Dialog dialog, bool freezeGame, bool zoom)
 	{
 		//animator.SetBool("IsOpen", true);
+		zoomCamera = zoom;
+
+		if (zoomCamera)
+		{
+			ppc.targetCameraHalfHeight = 2.5f;
+			ppc.adjustCameraFOV();
+		}
+
 		stopTime = freezeGame;
-		
+
 		nameText.text = dialog.name;
 
 		sentences.Clear();
@@ -74,7 +85,13 @@ public class DialogManager : MonoBehaviour
 	void EndDialog()
 	{
 		//animator.SetBool("IsOpen", false);
-		
+
+		if (zoomCamera)
+		{
+			ppc.targetCameraHalfHeight = 5f;
+			ppc.adjustCameraFOV();
+		}
+
 		// Hide the dialog box
 		GameObject.FindGameObjectWithTag("Dialog Box").SetActive(false);
 		// Let process dialog know this dialog has been processed

@@ -32,12 +32,17 @@ public class ProcessDialog : MonoBehaviour {
 			{
 				// We have more story elements in the queue
 				StoryElement se = storyQueue.Dequeue();
+				if (se.zoomIn)
+				{
+					// Set position here
+					//se.zoomToPosition;
+				}
 				se.TriggerDialog();
 				waitingOnDialog = true;
 			}
 			else
 			{
-				// CONSUME THE DIALOG
+				// CONSUME THE DIALOG after processing
 				Destroy(dialogToDestroy);
 				storyQueue = new Queue<StoryElement>();
 				dialogDataLoaded = false;
