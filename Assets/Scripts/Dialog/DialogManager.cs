@@ -14,6 +14,7 @@ public class DialogManager : MonoBehaviour
 	public Animator animator;
 
 	private Queue<string> sentences;
+	private bool stopTime = true;
 
 	// Use this for initialization
 	void Start()
@@ -21,9 +22,10 @@ public class DialogManager : MonoBehaviour
 		sentences = new Queue<string>();
 	}
 
-	public void StartDialog(Dialog dialog)
+	public void StartDialog(Dialog dialog, bool freezeGame)
 	{
 		//animator.SetBool("IsOpen", true);
+		stopTime = freezeGame;
 		
 		nameText.text = dialog.name;
 
@@ -78,13 +80,15 @@ public class DialogManager : MonoBehaviour
 		// Let process dialog know this dialog has been processed
 		dialogProcessor.DialogEnded();
 		// Turn time back on
-		Time.timeScale = 1.0f;
+		if (stopTime)
+			Time.timeScale = 1.0f;
 	}
 
 	private void OpenDialog()
 	{
 		// Turn off time to pause the game objects
-		Time.timeScale = 0.0f;
+		if (stopTime)
+			Time.timeScale = 0.0f;
 
 		// show the dialog box
 		dialogBox.SetActive(!dialogBox.activeInHierarchy);

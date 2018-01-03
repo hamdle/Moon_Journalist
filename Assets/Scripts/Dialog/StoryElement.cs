@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class StoryElement : MonoBehaviour {
 
+	public bool freezeGame = true;
 	public Dialog dialog;
-
 	// A way to feed this to the dialog manager
 	public void TriggerDialog()
 	{
-		FindObjectOfType<DialogManager>().StartDialog(dialog);
+		FindObjectOfType<DialogManager>().StartDialog(dialog, freezeGame);
 	}
 }

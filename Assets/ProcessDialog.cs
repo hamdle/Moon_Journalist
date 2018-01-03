@@ -9,6 +9,7 @@ public class ProcessDialog : MonoBehaviour {
 	Queue<StoryElement> storyQueue;
 	bool dialogDataLoaded;
 	bool waitingOnDialog;
+	GameObject dialogToDestroy;
 
 	// Use this for initialization
 	void Start () {
@@ -34,6 +35,14 @@ public class ProcessDialog : MonoBehaviour {
 				se.TriggerDialog();
 				waitingOnDialog = true;
 			}
+			else
+			{
+				// CONSUME THE DIALOG
+				Destroy(dialogToDestroy);
+				storyQueue = new Queue<StoryElement>();
+				dialogDataLoaded = false;
+				waitingOnDialog = false;
+			}
 		}
 	}
 
@@ -50,6 +59,7 @@ public class ProcessDialog : MonoBehaviour {
 
 		if (collision.gameObject.tag.Equals("Dialog"))
 		{
+			dialogToDestroy = collision.gameObject;
 			// Grab all the story elements
 			StoryElement[] storyElements = collision.gameObject.GetComponents<StoryElement>();
 			// Process the elements

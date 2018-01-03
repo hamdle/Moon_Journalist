@@ -17656,3 +17656,115 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b362aa0101a998e4189496f494903679, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &2131375988
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114187220852122492, guid: 773eaf657de3ebd45b64d0386a10658a,
+        type: 2}
+      propertyPath: dialog.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
+        type: 2}
+      propertyPath: dialog.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114187220852122492, guid: 773eaf657de3ebd45b64d0386a10658a,
+        type: 2}
+      propertyPath: dialog.name
+      value: Camera Man
+      objectReference: {fileID: 0}
+    - target: {fileID: 114187220852122492, guid: 773eaf657de3ebd45b64d0386a10658a,
+        type: 2}
+      propertyPath: dialog.sentences.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114187220852122492, guid: 773eaf657de3ebd45b64d0386a10658a,
+        type: 2}
+      propertyPath: dialog.sentences.Array.data[2]
+      value: Have you seen a tornado?3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114187220852122492, guid: 773eaf657de3ebd45b64d0386a10658a,
+        type: 2}
+      propertyPath: dialog.sentences.Array.data[0]
+      value: '...in 5... 4...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
+        type: 2}
+      propertyPath: dialog.name
+      value: Pete Cactus
+      objectReference: {fileID: 0}
+    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
+        type: 2}
+      propertyPath: dialog.sentences.Array.data[1]
+      value: What was it? We have to find out!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
+        type: 2}
+      propertyPath: dialog.sentences.Array.data[2]
+      value: Follow me camera man!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
+        type: 2}
+      propertyPath: dialog.sentences.Array.data[3]
+      value: No news again.
+      objectReference: {fileID: 0}
+    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
+        type: 2}
+      propertyPath: dialog.sentences.Array.data[0]
+      value: Wait... did you just see that?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
+        type: 2}
+      propertyPath: dialog.sentences.Array.data[4]
+      value: As we continue our year long streak.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1878182377871004, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
+      propertyPath: m_Name
+      value: Dialog (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
+        type: 2}
+      propertyPath: freezeGame
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114187220852122492, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
+  m_ParentPrefab: {fileID: 100100000, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
+  m_IsPrefabParent: 0
