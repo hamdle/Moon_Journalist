@@ -20,12 +20,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4898870432027590}
   - component: {fileID: 61047578714003512}
-  - component: {fileID: 114311162153230638}
-  - component: {fileID: 114513738736158942}
   - component: {fileID: 114187220852122492}
-  m_Layer: 0
-  m_Name: DialogTriggerBox
-  m_TagString: Untagged
+  - component: {fileID: 114050695085670220}
+  m_Layer: 2
+  m_Name: Dialog
+  m_TagString: Dialog
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +36,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1878182377871004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.79, y: -1.76, z: -0.103515625}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -68,6 +67,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.1573017, y: 2.3940182}
   m_EdgeRadius: 0
+--- !u!114 &114050695085670220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1878182377871004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5287b38aeb7ff8d46854d711579c2dd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    name: The Wind
+    sentences:
+    - does it work?
 --- !u!114 &114187220852122492
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -83,26 +97,5 @@ MonoBehaviour:
     name: Pete Cactus
     sentences:
     - Have you seen a tornado?
---- !u!114 &114311162153230638
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1878182377871004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd83d2db9fe2db240b75dde1e08a7652, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &114513738736158942
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1878182377871004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae441a27a5a0cbc47a5ef0b6b18ac46d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogBox: {fileID: 0}
+    - 2
+    - Have you seen a tornado?3

@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
 {
+	public GameObject dialogBox;
+	public ProcessDialog dialogProcessor;
 
 	public Text nameText;
 	public Text dialogText;
@@ -22,11 +24,13 @@ public class DialogManager : MonoBehaviour
 	public void StartDialog(Dialog dialog)
 	{
 		//animator.SetBool("IsOpen", true);
-		Debug.Log("Open dialog");
-
+		
 		nameText.text = dialog.name;
 
 		sentences.Clear();
+
+		//Debug.Log("Open dialog");
+		OpenDialog();
 
 		foreach (string sentence in dialog.sentences)
 		{
@@ -68,8 +72,18 @@ public class DialogManager : MonoBehaviour
 	void EndDialog()
 	{
 		//animator.SetBool("IsOpen", false);
+		
+		// Hide the dialog box
 		GameObject.FindGameObjectWithTag("Dialog Box").SetActive(false);
-		Debug.Log("Close dialog");
+		// Let process dialog know this dialog has been processed
+		dialogProcessor.DialogEnded();
+
+		//Debug.Log("Close dialog");
+	}
+
+	private void OpenDialog()
+	{
+		dialogBox.SetActive(!dialogBox.activeInHierarchy);
 	}
 
 }
