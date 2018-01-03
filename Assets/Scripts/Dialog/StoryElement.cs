@@ -12,6 +12,6 @@ public class StoryElement : MonoBehaviour {
 	// A way to feed this to the dialog manager
 	public void TriggerDialog()
 	{
-		FindObjectOfType<DialogManager>().StartDialog(dialog, freezeGame, zoomIn);
+		FindObjectOfType<DialogManager>().StartDialog(dialog, freezeGame, zoomIn, zoomToPosition);
 	}
 }

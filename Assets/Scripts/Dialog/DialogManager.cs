@@ -15,6 +15,7 @@ public class DialogManager : MonoBehaviour
 
 	public PixelPerfectCamera ppc;
 	private bool zoomCamera = false;
+	private float sceneZoom;
 
 	private Queue<string> sentences;
 	private bool stopTime = true;
@@ -23,16 +24,19 @@ public class DialogManager : MonoBehaviour
 	void Start()
 	{
 		sentences = new Queue<string>();
+
+		sceneZoom = ppc.targetCameraHalfHeight;
 	}
 
-	public void StartDialog(Dialog dialog, bool freezeGame, bool zoom)
+	public void StartDialog(Dialog dialog, bool freezeGame, bool zoom, float zoomValue = 0f)
 	{
 		//animator.SetBool("IsOpen", true);
 		zoomCamera = zoom;
 
 		if (zoomCamera)
 		{
-			ppc.targetCameraHalfHeight = 2.5f;
+			// just a reminder, zoom should always be postive
+			ppc.targetCameraHalfHeight = zoomValue <= float.Epsilon ? 2.5f : zoomValue;
 			ppc.adjustCameraFOV();
 		}
 
@@ -88,7 +92,7 @@ public class DialogManager : MonoBehaviour
 
 		if (zoomCamera)
 		{
-			ppc.targetCameraHalfHeight = 5f;
+			ppc.targetCameraHalfHeight = sceneZoom;
 			ppc.adjustCameraFOV();
 		}
 
