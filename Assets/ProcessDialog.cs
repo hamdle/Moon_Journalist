@@ -78,35 +78,39 @@ public class ProcessDialog : MonoBehaviour {
 
 	private void OnTriggerEnter2D(Collider2D collision)
 	{
-		// already loaded dialog data
-		if (dialogDataLoaded)
-			return;
+		
 
 		if (collision.gameObject.tag.Equals("Dialog"))
 		{
-			dialogToDestroy = collision.gameObject;
+			GameObject collisionGameObject = collision.gameObject;
+			bool forceThisDialog = collisionGameObject.GetComponent<DialogForcer>().forceDialogToPlay;
+
+			if (forceThisDialog)
+			{
+				PlayerMove playerMove = gameObject.GetComponent<PlayerMove>();
+				playerMove.DisableMove();
+			}
+			// already loaded dialog data
+			if (dialogDataLoaded && !forceThisDialog)
+				return;
+			
+			// Turn waiting on dialog off
+			// and clear up player movment flags
+			if (!forceThisDialog)
+				waitingOnDialog = false;
+
+			dialogToDestroy = collisionGameObject;
+			storyQueue.Clear();
 			// Grab all the story elements
 			StoryElement[] storyElements = collision.gameObject.GetComponents<StoryElement>();
 			// Process the elements
 			for (int i = 0; i < storyElements.Length; i++)
 			{
 				storyQueue.Enqueue(storyElements[i]);
-				Debug.Log("pushed " + i);
 			}
 
 			dialogDataLoaded = true;
-
-			// Load lines into dialog box
-			//storyElements[0].TriggerDialog();
-
-			// Open dialog box
-			//OpenDialog();
-
-
-
-			//dialog.TriggerDialog();
-			//shDialog.ShowHideToggle(dialogBox);
-			//toggled = true;
+			
 		}
 	}
 }

@@ -20,8 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4898870432027590}
   - component: {fileID: 61047578714003512}
-  - component: {fileID: 114187220852122492}
+  - component: {fileID: 114278960719634852}
   - component: {fileID: 114050695085670220}
+  - component: {fileID: 114682703312909714}
   m_Layer: 2
   m_Name: Dialog
   m_TagString: Dialog
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1878182377871004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.98, y: -1.78, z: 0}
+  m_LocalPosition: {x: 75.78, y: -1.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -54,7 +55,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 1.542521}
   m_SpriteTilingProperty:
     border: {x: 0.07, y: 0.08, z: 0.07, w: 0.089999996}
     pivot: {x: 0.5, y: 0.5}
@@ -65,7 +66,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.1573017, y: 2.3940182}
+  m_Size: {x: 2.1573017, y: 5.47906}
   m_EdgeRadius: 0
 --- !u!114 &114050695085670220
 MonoBehaviour:
@@ -78,11 +79,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5287b38aeb7ff8d46854d711579c2dd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  freezeGame: 0
+  zoomIn: 0
+  zoomToPosition: 0
+  disableControls: 1
+  forcePlay: 0
   dialog:
-    name: The Wind
+    name: PETE CACTUS
     sentences:
-    - does it work?
---- !u!114 &114187220852122492
+    - It must have blow this crate here.
+--- !u!114 &114278960719634852
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1878182377871004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e00befd4e4895df4fa04ccabd59322eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114682703312909714
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -93,9 +110,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5287b38aeb7ff8d46854d711579c2dd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  freezeGame: 0
+  zoomIn: 1
+  zoomToPosition: 4
+  disableControls: 1
+  forcePlay: 0
   dialog:
-    name: Pete Cactus
+    name: ??????
     sentences:
-    - Have you seen a tornado?
-    - 2
-    - Have you seen a tornado?3
+    - SSSSSSHHH

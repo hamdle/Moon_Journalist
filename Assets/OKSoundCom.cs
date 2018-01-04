@@ -9,7 +9,7 @@ public class OKSoundCom : MonoBehaviour {
 	{
 		GameObject gmGameObject = GameObject.FindGameObjectWithTag("GM");
 		GameManager gmGameManager = gmGameObject.GetComponent<GameManager>();
-		Debug.Log("Sending sound");
+		
 		gmGameManager.PlayOKSound();
 	}
 }

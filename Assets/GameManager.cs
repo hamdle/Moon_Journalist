@@ -50,7 +50,6 @@ public class GameManager : MonoBehaviour {
 
 	public void PlayOKSound()
 	{
-		Debug.Log("Play audio");
 		OKAudio.Play();
 	}
 }
