@@ -19,6 +19,7 @@ TagManager:
   - Solid Crate
   - Rotating Platform
   - Dialog
+  - GM
   layers:
   - Default
   - TransparentFX

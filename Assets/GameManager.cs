@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
 	public static GameManager instance = null;
+	public AudioSource OKAudio;
 	
 	private bool soundOn;
 
@@ -45,5 +46,11 @@ public class GameManager : MonoBehaviour {
 			soundOn = true;
 			Debug.Log("UNMUTE");
 		}
+	}
+
+	public void PlayOKSound()
+	{
+		Debug.Log("Play audio");
+		OKAudio.Play();
 	}
 }
