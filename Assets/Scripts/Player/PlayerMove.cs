@@ -72,8 +72,18 @@ public class PlayerMove : MonoBehaviour {
 		//rb.isKinematic = true;
 	}
 
+	public void EnableMove()
+	{
+		disableMove = false;
+	}
+
 	bool AllowPlayerJump()
 	{
+		// Something has diabled move, probably a dialog box
+		// so do not allow jumps to process
+		if (disableMove)
+			return false;
+
 		// If player is moving up or down
 		if (rb.velocity.y > 0.1f || rb.velocity.y < -0.1f)
 		{

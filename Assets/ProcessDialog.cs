@@ -9,6 +9,7 @@ public class ProcessDialog : MonoBehaviour {
 	Queue<StoryElement> storyQueue;
 	bool dialogDataLoaded;
 	bool waitingOnDialog;
+	bool disableControls;
 	GameObject dialogToDestroy;
 
 	// Use this for initialization
@@ -37,12 +38,24 @@ public class ProcessDialog : MonoBehaviour {
 					// Set position here
 					//se.zoomToPosition;
 				}
+
+				// Let the Player Move script know we need to
+				// disable controls if the Story Element wants to
+				disableControls = se.DisableControls();
+				if (disableControls)
+				{
+					PlayerMove playerMove = gameObject.GetComponent<PlayerMove>();
+					playerMove.DisableMove();
+				}
+
+				// Tell the Story Element notify the Dialog Manager
+				// to begin loading dialog attached to this element
 				se.TriggerDialog();
 				waitingOnDialog = true;
 			}
 			else
 			{
-				// CONSUME THE DIALOG after processing
+				// consume (DESTROY) the dialog after processing
 				Destroy(dialogToDestroy);
 				storyQueue = new Queue<StoryElement>();
 				dialogDataLoaded = false;
@@ -53,6 +66,13 @@ public class ProcessDialog : MonoBehaviour {
 
 	public void DialogEnded()
 	{
+		if (disableControls)
+		{
+			PlayerMove playerMove = gameObject.GetComponent<PlayerMove>();
+			playerMove.EnableMove();
+			disableControls = false;
+		}
+
 		waitingOnDialog = false;
 	}
 
