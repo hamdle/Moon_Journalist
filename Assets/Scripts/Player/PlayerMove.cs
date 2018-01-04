@@ -22,6 +22,7 @@ public class PlayerMove : MonoBehaviour {
 	[Header("Sound Effects")]
 	public AudioClip jumpSound;
 	public AudioSource jumpAudioSource;
+	public AudioSource flipAudioSource;
 
 	float xMovement;
 	Rigidbody2D rb;
@@ -158,8 +159,11 @@ public class PlayerMove : MonoBehaviour {
 		}
 	}
 
-	void FlipPlayer()
+	void FlipPlayer(bool playFlipSound = false)
 	{
+		if (playFlipSound)
+			flipAudioSource.Play();
+
 		facingRight = !facingRight;
 		Vector2 localScale = gameObject.transform.localScale;
 		localScale.x *= -1;
