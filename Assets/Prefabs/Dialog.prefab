@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4898870432027590}
   - component: {fileID: 61047578714003512}
+  - component: {fileID: 114492915451627832}
   - component: {fileID: 114278960719634852}
   - component: {fileID: 114050695085670220}
   - component: {fileID: 114682703312909714}
@@ -83,7 +84,6 @@ MonoBehaviour:
   zoomIn: 0
   zoomToPosition: 0
   disableControls: 1
-  forcePlay: 0
   dialog:
     name: PETE CACTUS
     sentences:
@@ -97,6 +97,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e00befd4e4895df4fa04ccabd59322eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceDialogToPlay: 0
+--- !u!114 &114492915451627832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1878182377871004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a978606b8f257c245b03bb49b9bfaa1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114682703312909714
@@ -114,7 +126,6 @@ MonoBehaviour:
   zoomIn: 1
   zoomToPosition: 4
   disableControls: 1
-  forcePlay: 0
   dialog:
     name: ??????
     sentences:

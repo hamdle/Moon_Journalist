@@ -6,7 +6,8 @@ public class GameManager : MonoBehaviour {
 
 	public static GameManager instance = null;
 	public AudioSource OKAudio;
-	
+
+
 	private bool soundOn;
 
 	void Awake () {
@@ -52,4 +53,5 @@ public class GameManager : MonoBehaviour {
 	{
 		OKAudio.Play();
 	}
+
 }
