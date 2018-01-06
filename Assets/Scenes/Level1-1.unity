@@ -487,11 +487,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4268279812732516, guid: 703cfac2c76e0fe47aee8b7ac71ed443,
     type: 2}
   m_PrefabInternal: {fileID: 1664212977}
---- !u!1 &462990148 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1015877182303010, guid: 558db8f6b934f0045ae78a757857a880,
-    type: 2}
-  m_PrefabInternal: {fileID: 95135169}
 --- !u!114 &462990150 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114169315853356540, guid: 558db8f6b934f0045ae78a757857a880,
@@ -970,11 +965,11 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1058831307}
+      objectReference: {fileID: 462990150}
     - target: {fileID: 114399831143100042, guid: 5067478a20811f34d969f573bc85d43e,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: DisplayNextSentence
+      value: DisableFireForDialog
       objectReference: {fileID: 0}
     - target: {fileID: 114399831143100042, guid: 5067478a20811f34d969f573bc85d43e,
         type: 2}
@@ -1009,7 +1004,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 462990150}
+      objectReference: {fileID: 1058831307}
     - target: {fileID: 114399831143100042, guid: 5067478a20811f34d969f573bc85d43e,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
@@ -1024,15 +1019,25 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 462990148}
+      objectReference: {fileID: 1058831307}
     - target: {fileID: 114399831143100042, guid: 5067478a20811f34d969f573bc85d43e,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: DisableFireForDialog
+      value: DisplayNextSentence
       objectReference: {fileID: 0}
     - target: {fileID: 114399831143100042, guid: 5067478a20811f34d969f573bc85d43e,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114399831143100042, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: DisplayNextSentence
+      objectReference: {fileID: 0}
+    - target: {fileID: 114399831143100042, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1099,7 +1104,7 @@ Prefab:
     - target: {fileID: 114682703312909714, guid: 773eaf657de3ebd45b64d0386a10658a,
         type: 2}
       propertyPath: dialog.sentences.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1150,12 +1155,12 @@ Prefab:
     - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
         type: 2}
       propertyPath: dialog.sentences.Array.data[1]
-      value: It must have blow this crate here.
+      value: all the way over here?
       objectReference: {fileID: 0}
     - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
         type: 2}
       propertyPath: dialog.sentences.Array.data[0]
-      value: That tornado!
+      value: What could have blow this box
       objectReference: {fileID: 0}
     - target: {fileID: 114682703312909714, guid: 773eaf657de3ebd45b64d0386a10658a,
         type: 2}
@@ -1417,7 +1422,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2105188077}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1553,6 +1559,48 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1404633073
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1189801423}
+    m_Modifications:
+    - target: {fileID: 4898368949675756, guid: 4a19ff92e06e1fa42b550d18769c3b50, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 21.804947
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898368949675756, guid: 4a19ff92e06e1fa42b550d18769c3b50, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.06816083
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898368949675756, guid: 4a19ff92e06e1fa42b550d18769c3b50, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898368949675756, guid: 4a19ff92e06e1fa42b550d18769c3b50, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898368949675756, guid: 4a19ff92e06e1fa42b550d18769c3b50, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898368949675756, guid: 4a19ff92e06e1fa42b550d18769c3b50, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898368949675756, guid: 4a19ff92e06e1fa42b550d18769c3b50, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4898368949675756, guid: 4a19ff92e06e1fa42b550d18769c3b50, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4a19ff92e06e1fa42b550d18769c3b50, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &1430184512
 Prefab:
@@ -18543,9 +18591,7 @@ MonoBehaviour:
     - And I'm your host...
     - Pete Cactus.
     - Our top story for today.
-    - No news again.
-    - That's our longest running streak of no news
-    - since yesterday.
+    - No Moon news!
 --- !u!114 &2020803172 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114975028433497488, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8,
@@ -18609,6 +18655,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b362aa0101a998e4189496f494903679, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &2105188077 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4898368949675756, guid: 4a19ff92e06e1fa42b550d18769c3b50,
+    type: 2}
+  m_PrefabInternal: {fileID: 1404633073}
 --- !u!1001 &2131375988
 Prefab:
   m_ObjectHideFlags: 0
@@ -18623,7 +18674,7 @@ Prefab:
     - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
         type: 2}
       propertyPath: dialog.sentences.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
       propertyPath: m_LocalPosition.x
