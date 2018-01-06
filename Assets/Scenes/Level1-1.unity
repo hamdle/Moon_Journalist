@@ -1111,6 +1111,11 @@ Prefab:
       propertyPath: dialog.sentences.Array.data[1]
       value: '* and other tornado noises *'
       objectReference: {fileID: 0}
+    - target: {fileID: 114492915451627832, guid: 773eaf657de3ebd45b64d0386a10658a,
+        type: 2}
+      propertyPath: dialogID
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
   m_IsPrefabParent: 0
@@ -1294,6 +1299,11 @@ Prefab:
         type: 2}
       propertyPath: m_Size.y
       value: 7.468487
+      objectReference: {fileID: 0}
+    - target: {fileID: 114492915451627832, guid: 773eaf657de3ebd45b64d0386a10658a,
+        type: 2}
+      propertyPath: dialogID
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114682703312909714, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
@@ -18668,6 +18678,11 @@ Prefab:
         type: 2}
       propertyPath: m_Size.y
       value: 5.47906
+      objectReference: {fileID: 0}
+    - target: {fileID: 114492915451627832, guid: 773eaf657de3ebd45b64d0386a10658a,
+        type: 2}
+      propertyPath: dialogID
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}

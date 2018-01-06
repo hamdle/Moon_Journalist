@@ -13,13 +13,16 @@ public class DialogRegistrar : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-		//sceneDialogIDs;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+	public bool HasDialogBeenPlayed(int id)
+	{
+		return sceneDialogIDs[id] == 0 ? true : false;
 	}
 
 	void OnEnable()
@@ -41,13 +44,28 @@ public class DialogRegistrar : MonoBehaviour {
 		else
 		{
 			reloadedSameLevel = false;
+			ClearDialogIDs();
 		}
 
 		lastLoadedSceneIndex = scene.buildIndex;
 	}
 
+	private void ClearDialogIDs()
+	{
+		for (int i = 0; i < sceneDialogIDs.Length; i++)
+		{
+			sceneDialogIDs[i] = 0;
+		}
+	}
+
 	public void RegisterDialog(int id)
 	{
-		sceneDialogIDs[id] = id;
+		if (!reloadedSameLevel)
+			sceneDialogIDs[id] = 1;
+	}
+
+	public void ConsumedDialog(int id)
+	{
+		sceneDialogIDs[id] = 0;
 	}
 }

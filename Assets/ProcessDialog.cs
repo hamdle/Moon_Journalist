@@ -11,6 +11,7 @@ public class ProcessDialog : MonoBehaviour {
 	bool waitingOnDialog;
 	bool disableControls;
 	GameObject dialogToDestroy;
+	int dialogID;
 
 	// Use this for initialization
 	void Start () {
@@ -73,6 +74,9 @@ public class ProcessDialog : MonoBehaviour {
 			disableControls = false;
 		}
 
+		GameObject go = GameObject.FindGameObjectWithTag("GM");
+		go.GetComponent<DialogRegistrar>().ConsumedDialog(dialogID);
+
 		waitingOnDialog = false;
 	}
 
@@ -85,15 +89,27 @@ public class ProcessDialog : MonoBehaviour {
 			GameObject collisionGameObject = collision.gameObject;
 			bool forceThisDialog = collisionGameObject.GetComponent<DialogForcer>().forceDialogToPlay;
 
+			
+			// already loaded dialog data
+			if (dialogDataLoaded && !forceThisDialog)
+				return;
+
+			RegisterDialog registerDialog = collisionGameObject.GetComponent<RegisterDialog>();
+			dialogID = registerDialog.dialogID;
+			GameObject go = GameObject.FindGameObjectWithTag("GM");
+			bool hasBeenPlayed = go.GetComponent<DialogRegistrar>().HasDialogBeenPlayed(dialogID);
+			if (hasBeenPlayed)
+			{
+				DialogEnded();
+				return;
+			}
+
 			if (forceThisDialog)
 			{
 				PlayerMove playerMove = gameObject.GetComponent<PlayerMove>();
 				playerMove.DisableMove();
 			}
-			// already loaded dialog data
-			if (dialogDataLoaded && !forceThisDialog)
-				return;
-			
+
 			// Turn waiting on dialog off
 			// and clear up player movment flags
 			if (!forceThisDialog)
