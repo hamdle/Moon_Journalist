@@ -67,5 +67,9 @@ public class DialogRegistrar : MonoBehaviour {
 	public void ConsumedDialog(int id)
 	{
 		sceneDialogIDs[id] = 0;
+
+		GameObject go = GameObject.FindGameObjectWithTag("GM");
+		go.GetComponent<GameManager>().EnableFireForDialog();
+		Debug.Log("Enable fire");
 	}
 }

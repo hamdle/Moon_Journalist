@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour {
 	public static GameManager instance = null;
 	public AudioSource OKAudio;
 
+	private bool disableFire;
 
 	private bool soundOn;
 
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour {
 	public void InitGame()
 	{
 		soundOn = true;
+		disableFire = false;
 	}
 
 	public void ToggleSound()
@@ -52,6 +54,22 @@ public class GameManager : MonoBehaviour {
 	public void PlayOKSound()
 	{
 		OKAudio.Play();
+	}
+
+	public void DisableFireForDialog()
+	{
+		Debug.Log("Disabled fire");
+		disableFire = true;
+	}
+
+	public void EnableFireForDialog()
+	{
+		disableFire = false;
+	}
+
+	public bool IsFireDisabled()
+	{
+		return disableFire;
 	}
 
 }

@@ -30,7 +30,15 @@ public class MicrophoneThrower : MonoBehaviour {
 		if (Input.GetButtonDown("Fire1"))
 		{
 			// Leave if we are waiting on the user to hit the dialog box
-			if (dialogBox.gameObject.activeInHierarchy)
+			ProcessDialog pd = GetComponent<ProcessDialog>();
+			if (pd.DialogDisableControls())
+				return;
+			//if (dialogBox.gameObject.activeInHierarchy)
+			//return;
+			GameObject go = GameObject.FindGameObjectWithTag("GM");
+			GameManager gm = go.GetComponent<GameManager>();
+			Debug.Log("Checking fire " + gm.IsFireDisabled());
+			if (gm.IsFireDisabled())
 				return;
 
 			throwAudioSource.Play();

@@ -76,6 +76,7 @@ public class ProcessDialog : MonoBehaviour {
 
 		GameObject go = GameObject.FindGameObjectWithTag("GM");
 		go.GetComponent<DialogRegistrar>().ConsumedDialog(dialogID);
+		//go.GetComponent<GameManager>().EnableFireForDialog();
 
 		waitingOnDialog = false;
 	}
@@ -128,5 +129,10 @@ public class ProcessDialog : MonoBehaviour {
 			dialogDataLoaded = true;
 			
 		}
+	}
+
+	public bool DialogDisableControls()
+	{
+		return disableControls;
 	}
 }

@@ -487,6 +487,17 @@ Transform:
   m_PrefabParentObject: {fileID: 4268279812732516, guid: 703cfac2c76e0fe47aee8b7ac71ed443,
     type: 2}
   m_PrefabInternal: {fileID: 1664212977}
+--- !u!1 &462990148 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1015877182303010, guid: 558db8f6b934f0045ae78a757857a880,
+    type: 2}
+  m_PrefabInternal: {fileID: 95135169}
+--- !u!114 &462990150 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114169315853356540, guid: 558db8f6b934f0045ae78a757857a880,
+    type: 2}
+  m_PrefabInternal: {fileID: 95135169}
+  m_Script: {fileID: 11500000, guid: 66d68199b0464cf4b8248d9124491111, type: 3}
 --- !u!1001 &502831686
 Prefab:
   m_ObjectHideFlags: 0
@@ -833,7 +844,7 @@ Prefab:
     - target: {fileID: 114399831143100042, guid: 5067478a20811f34d969f573bc85d43e,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 224847971319257360, guid: 5067478a20811f34d969f573bc85d43e,
         type: 2}
@@ -983,6 +994,46 @@ Prefab:
     - target: {fileID: 1396683618132636, guid: 5067478a20811f34d969f573bc85d43e, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114399831143100042, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114399831143100042, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114399831143100042, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 462990150}
+    - target: {fileID: 114399831143100042, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114399831143100042, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114399831143100042, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 462990148}
+    - target: {fileID: 114399831143100042, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: DisableFireForDialog
+      objectReference: {fileID: 0}
+    - target: {fileID: 114399831143100042, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5067478a20811f34d969f573bc85d43e, type: 2}
@@ -1205,7 +1256,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: dialog.name
@@ -1423,7 +1474,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2dac6408ea73a27419037c86bd942aee,
+      objectReference: {fileID: 21300000, guid: 3ac412aeb3ed0ce4c8661f3f90c67b86,
         type: 3}
     - target: {fileID: 212382622009600238, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8,
         type: 2}
@@ -18489,10 +18540,12 @@ MonoBehaviour:
     name: PETE CACTUS
     sentences:
     - Welcome to Moon News.
-    - I'm your host Pete Cactus.
+    - And I'm your host...
+    - Pete Cactus.
     - Our top story for today.
-    - No news again on the Moon.
-    - Know more at 11.
+    - No news again.
+    - That's our longest running streak of no news
+    - since yesterday.
 --- !u!114 &2020803172 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114975028433497488, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8,
@@ -18602,7 +18655,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: dialog.name
