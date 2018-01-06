@@ -17,6 +17,7 @@ public class Gate : MonoBehaviour {
 
 	public Camera mainCamera;
 	public float sizeStep;
+	public float stopOnDepth;
 
 	public Canvas clearCanvas;
 	private Text clearText;
@@ -41,11 +42,17 @@ public class Gate : MonoBehaviour {
 			mainCamera.orthographicSize -= sizeStep * Time.deltaTime;
 		}
 
-		if (mainCamera.orthographicSize < 0)
+		if (mainCamera.orthographicSize < stopOnDepth)
 		{
-			mainCamera.orthographicSize = 0;
-			SceneManager.LoadScene(getSceneIndex());
+			mainCamera.orthographicSize = stopOnDepth;
+			zoomIn = false;
+			//SceneManager.LoadScene(getSceneIndex());
 		}
+	}
+
+	public void EnterGate()
+	{
+		SceneManager.LoadScene(getSceneIndex());
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)
