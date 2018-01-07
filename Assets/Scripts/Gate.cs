@@ -46,6 +46,7 @@ public class Gate : MonoBehaviour {
 		{
 			mainCamera.orthographicSize = stopOnDepth;
 			zoomIn = false;
+			clearCanvas.gameObject.SetActive(true);
 			//SceneManager.LoadScene(getSceneIndex());
 		}
 	}
