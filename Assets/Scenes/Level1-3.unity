@@ -724,7 +724,7 @@ Prefab:
     - target: {fileID: 114831421088698978, guid: ecca83927197de44da81f6c3a0c4c9e3,
         type: 2}
       propertyPath: xMax
-      value: 76.5
+      value: 182.5
       objectReference: {fileID: 0}
     - target: {fileID: 114865587672797516, guid: ecca83927197de44da81f6c3a0c4c9e3,
         type: 2}
