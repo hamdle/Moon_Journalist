@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MicrophoneDeath : MonoBehaviour {
 
+	public float timeLeftToLive = 1f;
+	float timeLeftTimer = 0;
+
 	AudioSource[] hitAudioSource;
 
 	float deathDelay = 0.5f;
@@ -33,6 +36,15 @@ public class MicrophoneDeath : MonoBehaviour {
 				timer += Time.deltaTime;
 				currentColor.a = deathDelay - timer;
 				sr.color = currentColor;
+			}
+		}
+		else
+		{
+			timeLeftTimer += Time.deltaTime;
+
+			if (timeLeftTimer > timeLeftToLive)
+			{
+				Invoke("KillSelf", 0f);
 			}
 		}
 	}
