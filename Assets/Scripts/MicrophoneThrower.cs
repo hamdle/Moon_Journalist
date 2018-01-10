@@ -27,7 +27,7 @@ public class MicrophoneThrower : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetButtonDown("Fire1"))
+		if (Input.GetButtonDown("Fire1") || Input.GetKeyDown("l"))
 		{
 			// Disable firing only if dialog asks for it not to be shown
 			ProcessDialog pd = GetComponent<ProcessDialog>();

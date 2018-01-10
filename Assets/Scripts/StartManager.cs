@@ -44,7 +44,7 @@ public class StartManager : MonoBehaviour {
 
 	private void LoadFirstScene()
 	{
-		SceneManager.LoadScene("Level1-1");
+		SceneManager.LoadScene("LevelSelect");
 	}
 
 	private void QuitGame()

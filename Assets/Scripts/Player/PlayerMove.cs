@@ -141,7 +141,7 @@ public class PlayerMove : MonoBehaviour {
 		xMovement = Input.GetAxis("Horizontal");
 		bool jump = Input.GetButtonDown("Jump");
 
-		if (jump || Input.GetKeyDown("w"))
+		if (jump || Input.GetKeyDown("w") || Input.GetKeyDown("k"))
 		{
 			Jump();
 		}
