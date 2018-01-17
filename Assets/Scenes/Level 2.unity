@@ -752,12 +752,12 @@ Prefab:
     - target: {fileID: 224580466575415498, guid: 69fb71f4e882a464194ff13915d944c4,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 514
+      value: 496
       objectReference: {fileID: 0}
     - target: {fileID: 224580466575415498, guid: 69fb71f4e882a464194ff13915d944c4,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 289
+      value: 279
       objectReference: {fileID: 0}
     - target: {fileID: 224580466575415498, guid: 69fb71f4e882a464194ff13915d944c4,
         type: 2}
@@ -901,12 +901,12 @@ Prefab:
     - target: {fileID: 224474076587353460, guid: 3c56062814c79d942b169e2cd56145ff,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 514
+      value: 496
       objectReference: {fileID: 0}
     - target: {fileID: 224474076587353460, guid: 3c56062814c79d942b169e2cd56145ff,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 289
+      value: 279
       objectReference: {fileID: 0}
     - target: {fileID: 224474076587353460, guid: 3c56062814c79d942b169e2cd56145ff,
         type: 2}
@@ -987,6 +987,10 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1517933536288356, guid: 3c56062814c79d942b169e2cd56145ff, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3c56062814c79d942b169e2cd56145ff, type: 2}
@@ -1682,12 +1686,12 @@ Prefab:
     - target: {fileID: 224847971319257360, guid: 5067478a20811f34d969f573bc85d43e,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 514
+      value: 496
       objectReference: {fileID: 0}
     - target: {fileID: 224847971319257360, guid: 5067478a20811f34d969f573bc85d43e,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 289
+      value: 279
       objectReference: {fileID: 0}
     - target: {fileID: 224847971319257360, guid: 5067478a20811f34d969f573bc85d43e,
         type: 2}
