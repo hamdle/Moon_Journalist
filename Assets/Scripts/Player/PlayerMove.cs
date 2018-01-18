@@ -96,6 +96,13 @@ public class PlayerMove : MonoBehaviour {
 				isGroundedBleed = -0.45f;
 			}
 			extraJumps++;
+
+			// This restricts the extra Jumps but the tilemap is too buggy
+			/* if (extraJumps > 1)
+			{
+				return false;
+			}
+			*/
 		}
 		else
 		{
