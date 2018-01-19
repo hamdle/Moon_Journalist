@@ -2031,7 +2031,7 @@ Prefab:
     - target: {fileID: 20956502734696410, guid: ecca83927197de44da81f6c3a0c4c9e3,
         type: 2}
       propertyPath: orthographic size
-      value: 4.359375
+      value: 4.40625
       objectReference: {fileID: 0}
     - target: {fileID: 114831421088698978, guid: ecca83927197de44da81f6c3a0c4c9e3,
         type: 2}
@@ -2198,12 +2198,12 @@ Prefab:
     - target: {fileID: 224847971319257360, guid: 5067478a20811f34d969f573bc85d43e,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 501.5
       objectReference: {fileID: 0}
     - target: {fileID: 224847971319257360, guid: 5067478a20811f34d969f573bc85d43e,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 282
       objectReference: {fileID: 0}
     - target: {fileID: 224847971319257360, guid: 5067478a20811f34d969f573bc85d43e,
         type: 2}
@@ -2342,7 +2342,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1396683618132636, guid: 5067478a20811f34d969f573bc85d43e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114399831143100042, guid: 5067478a20811f34d969f573bc85d43e,
         type: 2}
@@ -2394,6 +2394,86 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1841525164841648, guid: 5067478a20811f34d969f573bc85d43e, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114702782185077518, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_Text
+      value: PETE CACTUS
+      objectReference: {fileID: 0}
+    - target: {fileID: 114856466359330664, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_Text
+      value: Can you hear the tornado?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114856466359330664, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114856466359330664, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114856466359330664, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114954929696228764, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114954929696228764, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114954929696228764, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114399831143100042, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_Colors.m_NormalColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114399831143100042, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_Colors.m_NormalColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114399831143100042, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_Colors.m_NormalColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114702782185077518, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114702782185077518, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114702782185077518, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114702782185077518, guid: 5067478a20811f34d969f573bc85d43e,
+        type: 2}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 0a5f9f26fd65e9d46ab49618188e3a29,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5067478a20811f34d969f573bc85d43e, type: 2}
   m_IsPrefabParent: 0
