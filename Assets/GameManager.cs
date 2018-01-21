@@ -7,6 +7,8 @@ public class GameManager : MonoBehaviour {
 	public static GameManager instance = null;
 	public AudioSource OKAudio;
 
+	public List<int> levelsComplete;
+
 	private bool soundOn;
 
 	void Awake () {
@@ -27,6 +29,8 @@ public class GameManager : MonoBehaviour {
 
 	public void InitGame()
 	{
+		levelsComplete = new List<int>();
+
 		soundOn = true;
 	}
 
@@ -51,6 +55,11 @@ public class GameManager : MonoBehaviour {
 	public void PlayOKSound()
 	{
 		OKAudio.Play();
+	}
+
+	public void LevelComplete(int i)
+	{
+		levelsComplete.Add(i);
 	}
 
 }
