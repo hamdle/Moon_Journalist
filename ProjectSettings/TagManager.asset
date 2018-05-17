@@ -20,6 +20,7 @@ TagManager:
   - Rotating Platform
   - Dialog
   - GM
+  - Level 1
   layers:
   - Default
   - TransparentFX
