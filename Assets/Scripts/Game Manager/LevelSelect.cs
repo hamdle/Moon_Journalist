@@ -16,9 +16,17 @@ public class LevelSelect : MonoBehaviour {
 		if (thisScene.name == "LevelSelect")
 		{
 			// More comments go here
-			GameObject level1 = GameObject.FindGameObjectWithTag("Level 1");
-			Button button1 = level1.GetComponent<Button>();
-			button1.interactable = false;
+			Debug.Log(levels.Length);
+			for (int i = 0; i < levels.Length; i++)
+			{
+				Debug.Log(levels[i]);
+				if (levels[i] == 0)
+				{
+					GameObject level1 = GameObject.FindGameObjectWithTag("Level " + (i+1));
+					Button button1 = level1.GetComponent<Button>();
+					button1.interactable = false;
+				}
+			}
 		}
 	}
 	
