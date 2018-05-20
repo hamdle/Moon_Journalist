@@ -307,7 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2740709487beab419a5c0a04871fdff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 7
+  sceneIndex: 9
 --- !u!114 &142527069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5125,7 +5125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2740709487beab419a5c0a04871fdff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 8
+  sceneIndex: 10
 --- !u!114 &1865324900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5165,8 +5165,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1865324897}
-        m_MethodName: 
+      - m_Target: {fileID: 1865324899}
+        m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
