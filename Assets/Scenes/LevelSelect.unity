@@ -5009,7 +5009,7 @@ Prefab:
     - target: {fileID: 114951166429871762, guid: 558db8f6b934f0045ae78a757857a880,
         type: 2}
       propertyPath: levels.Array.size
-      value: 8
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 4750851606520744, guid: 558db8f6b934f0045ae78a757857a880, type: 2}
       propertyPath: m_LocalPosition.x
@@ -5056,6 +5056,46 @@ Prefab:
     - target: {fileID: 114951166429871762, guid: 558db8f6b934f0045ae78a757857a880,
         type: 2}
       propertyPath: levels.Array.data[7]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951166429871762, guid: 558db8f6b934f0045ae78a757857a880,
+        type: 2}
+      propertyPath: levels.Array.data[8]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951166429871762, guid: 558db8f6b934f0045ae78a757857a880,
+        type: 2}
+      propertyPath: levels.Array.data[9]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951166429871762, guid: 558db8f6b934f0045ae78a757857a880,
+        type: 2}
+      propertyPath: levels.Array.data[10]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951166429871762, guid: 558db8f6b934f0045ae78a757857a880,
+        type: 2}
+      propertyPath: levels.Array.data[11]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951166429871762, guid: 558db8f6b934f0045ae78a757857a880,
+        type: 2}
+      propertyPath: levels.Array.data[3]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951166429871762, guid: 558db8f6b934f0045ae78a757857a880,
+        type: 2}
+      propertyPath: levels.Array.data[4]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951166429871762, guid: 558db8f6b934f0045ae78a757857a880,
+        type: 2}
+      propertyPath: levels.Array.data[5]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114951166429871762, guid: 558db8f6b934f0045ae78a757857a880,
+        type: 2}
+      propertyPath: levels.Array.data[6]
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
