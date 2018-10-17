@@ -69,9 +69,10 @@ public class Gate : MonoBehaviour {
 			gateAudioSource.Play();
 			melodyAudioSource.Play();
 			playerMove.DisableMove();
-			zoomIn = true;
+			zoomIn = false;
 			clearCanvas.enabled = true;
 			clearText = gameObject.GetComponent<Text>();
+			Invoke("EnterGate", 4f);
 			//SceneManager.LoadScene(getSceneIndex());
 		}
 	}
