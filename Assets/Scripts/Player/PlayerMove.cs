@@ -84,6 +84,7 @@ public class PlayerMove : MonoBehaviour {
 		if (disableMove)
 			return false;
 
+		/*
 		// If player is moving up or down
 		if (rb.velocity.y > 0.1f || rb.velocity.y < -0.1f)
 		{
@@ -98,16 +99,18 @@ public class PlayerMove : MonoBehaviour {
 			extraJumps++;
 
 			// This restricts the extra Jumps but the tilemap is too buggy
-			/* if (extraJumps > 1)
+			if (extraJumps > 1)
 			{
 				return false;
 			}
-			*/
+			
 		}
 		else
 		{
 			extraJumps = 0;
 		}
+		*/
+		extraJumps = 0;
 
 		Vector2 position = transform.position;
 		Vector2 direction = Vector2.down;
@@ -116,7 +119,7 @@ public class PlayerMove : MonoBehaviour {
 
 		Vector2 leftPosition = position - (new Vector2(width / 2 + isGroundedBleed, 0));
 		Vector2 rightPosition = position + (new Vector2(width / 2 + isGroundedBleed, 0));
-		isGroundedBleed = 0f;
+		//isGroundedBleed = 0f;
 
 		// DEBUG
 		Debug.DrawRay(leftPosition, direction, Color.green, 5.0f);

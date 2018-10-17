@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ExplosionDestory : MonoBehaviour {
 
-	public float killTimer = 4f;
+	public float killTimer = 1f;
 
 	// Use this for initialization
 	void Start () {
