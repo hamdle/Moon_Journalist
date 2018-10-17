@@ -2863,6 +2863,11 @@ Prefab:
       propertyPath: isGroundedBleed
       value: -0.77
       objectReference: {fileID: 0}
+    - target: {fileID: 114596951066645042, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8,
+        type: 2}
+      propertyPath: playerJumpPower
+      value: 795
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8, type: 2}
   m_IsPrefabParent: 0

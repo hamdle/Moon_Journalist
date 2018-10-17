@@ -673,12 +673,12 @@ Prefab:
     - target: {fileID: 224580466575415498, guid: 69fb71f4e882a464194ff13915d944c4,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 498.5
+      value: 533.5
       objectReference: {fileID: 0}
     - target: {fileID: 224580466575415498, guid: 69fb71f4e882a464194ff13915d944c4,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 280.5
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 224580466575415498, guid: 69fb71f4e882a464194ff13915d944c4,
         type: 2}
@@ -1619,7 +1619,7 @@ Prefab:
     - target: {fileID: 20956502734696410, guid: ecca83927197de44da81f6c3a0c4c9e3,
         type: 2}
       propertyPath: orthographic size
-      value: 4.3828125
+      value: 4.6875
       objectReference: {fileID: 0}
     - target: {fileID: 114831421088698978, guid: ecca83927197de44da81f6c3a0c4c9e3,
         type: 2}
@@ -2882,7 +2882,7 @@ Prefab:
         type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 25382f39149a19b4d9e53fe68e893122,
+      objectReference: {fileID: 21300000, guid: 3ac412aeb3ed0ce4c8661f3f90c67b86,
         type: 3}
     - target: {fileID: 212382622009600238, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8,
         type: 2}
@@ -2958,6 +2958,16 @@ Prefab:
         type: 2}
       propertyPath: m_Size.x
       value: 0.6275492
+      objectReference: {fileID: 0}
+    - target: {fileID: 114596951066645042, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8,
+        type: 2}
+      propertyPath: isGroundedBleed
+      value: -0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 114596951066645042, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8,
+        type: 2}
+      propertyPath: playerJumpPower
+      value: 795
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8, type: 2}
