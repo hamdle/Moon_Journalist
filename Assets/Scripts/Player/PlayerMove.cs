@@ -146,7 +146,7 @@ public class PlayerMove : MonoBehaviour {
 
 		// Controls
 		xMovement = Input.GetAxis("Horizontal");
-		bool jump = Input.GetButtonDown("Jump");
+		bool jump = Input.GetButtonDown("Fire1");
 
 		if (jump || Input.GetKeyDown("w") || Input.GetKeyDown("k"))
 		{

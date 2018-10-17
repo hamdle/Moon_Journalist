@@ -39,6 +39,7 @@ public class StartManager : MonoBehaviour {
 
 	private void StartGame()
 	{
+		// Wait 1 second to let sound & animation play
 		Invoke("LoadFirstScene", 1f);
 	}
 
