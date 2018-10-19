@@ -622,7 +622,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Super Hero Sightings
+  m_Text: Cat or Superhero?
 --- !u!222 &270035669
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1948,7 +1948,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Wizard News
+  m_Text: Local Wizard News
 --- !u!222 &647445952
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2341,7 +2341,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sports section
+  m_Text: The Sports section
 --- !u!222 &790528972
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6942,7 +6942,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The Cheese Section
+  m_Text: Cheese Slice on face
 --- !u!222 &2029173025
 CanvasRenderer:
   m_ObjectHideFlags: 0
