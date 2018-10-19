@@ -18483,7 +18483,7 @@ Prefab:
     - target: {fileID: 114550389807023358, guid: ca507b6963c65464283bedc2de66a520,
         type: 2}
       propertyPath: m_Text
-      value: The Sports Section
+      value: More Casual News
       objectReference: {fileID: 0}
     - target: {fileID: 114550389807023358, guid: ca507b6963c65464283bedc2de66a520,
         type: 2}
