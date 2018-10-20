@@ -7,7 +7,10 @@ public class GameManager : MonoBehaviour {
 	public static GameManager instance = null;
 	public AudioSource OKAudio;
 
-	public List<int> levelsComplete;
+	//public List<int> levelsComplete;
+	// New
+	public int[] unlockedLevels;
+	Dictionary<int, int> buildSettingsMap;
 
 	private bool soundOn;
 
@@ -29,7 +32,19 @@ public class GameManager : MonoBehaviour {
 
 	public void InitGame()
 	{
-		levelsComplete = new List<int>();
+		//levelsComplete = new List<int>();
+
+		unlockedLevels = new int[] { 1, 0, 0, 0, 0, 0, 0, 0 };
+		buildSettingsMap = new Dictionary<int, int>();
+
+		buildSettingsMap.Add(3, 0);
+		buildSettingsMap.Add(4, 1);
+		buildSettingsMap.Add(5, 2);
+		buildSettingsMap.Add(6, 3);
+		buildSettingsMap.Add(7, 4);
+		buildSettingsMap.Add(8, 5);
+		buildSettingsMap.Add(9, 6);
+		buildSettingsMap.Add(10, 7);
 
 		soundOn = true;
 	}
@@ -59,7 +74,13 @@ public class GameManager : MonoBehaviour {
 
 	public void LevelComplete(int i)
 	{
-		levelsComplete.Add(i);
+		Debug.Log("Level completed " + unlockedLevels.Length);
+		if (buildSettingsMap.ContainsKey(i + 1))
+		{
+			unlockedLevels[buildSettingsMap[i + 1]] = 1;
+		}
+
+		//levelsComplete.Add(i);
 	}
 
 }

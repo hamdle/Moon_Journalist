@@ -56,7 +56,7 @@ public class Gate : MonoBehaviour {
 		GameObject go = GameObject.FindGameObjectWithTag("GM");
 		GameManager gm = go.GetComponent<GameManager>();
 		gm.LevelComplete(SceneManager.GetActiveScene().buildIndex);
-		Debug.Log(gm.levelsComplete);
+		//Debug.Log(gm.levelsComplete);
 		SceneManager.LoadScene(getSceneIndex());
 	}
 
