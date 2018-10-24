@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour {
 
 	public static GameManager instance = null;
 	public AudioSource OKAudio;
+	public bool mute = false;
 
 	//public List<int> levelsComplete;
 	// New
@@ -33,6 +34,8 @@ public class GameManager : MonoBehaviour {
 	public void InitGame()
 	{
 		//levelsComplete = new List<int>();
+		if (mute)
+			AudioListener.volume = 0f;
 
 		unlockedLevels = new int[] { 1, 0, 0, 0, 0, 0, 0, 0 };
 		buildSettingsMap = new Dictionary<int, int>();
