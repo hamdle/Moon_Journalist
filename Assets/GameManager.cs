@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour {
 	Dictionary<int, int> buildSettingsMap;
 
 	private bool soundOn;
+	private bool paused = false;
 
 	void Awake () {
 
@@ -50,6 +51,26 @@ public class GameManager : MonoBehaviour {
 		buildSettingsMap.Add(10, 7);
 
 		soundOn = true;
+	}
+
+	public void Update()
+	{
+		bool pauseRelease = Input.GetButtonUp("Jump");
+		if (pauseRelease)
+		{
+			Debug.Log("paused button is here");
+			if (paused)
+			{
+				Time.timeScale = 1;
+				paused = false;
+			}
+			else
+			{
+				// Pause the game
+				Time.timeScale = 0;
+				paused = true;
+			}
+		}
 	}
 
 	public void ToggleSound()
