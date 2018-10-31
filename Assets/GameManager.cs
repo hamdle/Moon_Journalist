@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour {
 
 	public void Update()
 	{
-		bool pauseRelease = Input.GetButtonUp("Fire3");
+		bool pauseRelease = Input.GetButtonUp("Fire3") || Input.GetButtonDown("Cancel");
 
 		if (pauseRelease)
 		{
