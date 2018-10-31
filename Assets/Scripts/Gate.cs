@@ -23,6 +23,10 @@ public class Gate : MonoBehaviour {
 	private Text clearText;
 	bool zoomIn = false;
 
+	public float completeTimer = 0.0f;
+	private float levelTimer;
+	public Text timeDisplay;
+
 	private void Awake()
 	{
 		gameObject.GetComponent<ParticleSystem>().Play();
@@ -33,6 +37,8 @@ public class Gate : MonoBehaviour {
 		melodyAudioSource.clip = melodySound;
 
 		clearCanvas.enabled = false;
+		levelTimer = Time.time;
+
 	}
 	
 	// Update is called once per frame
@@ -66,9 +72,16 @@ public class Gate : MonoBehaviour {
 		{
 			// Load next level
 			Debug.Log("Gate");
+
+			// Get audio started first
 			gateAudioSource.Play();
 			melodyAudioSource.Play();
 			playerMove.DisableMove();
+
+			// Log time
+			completeTimer = Time.time - levelTimer;
+			timeDisplay.text = completeTimer.ToString("n2");
+
 			zoomIn = false;
 			clearCanvas.enabled = true;
 			clearText = gameObject.GetComponent<Text>();
@@ -94,4 +107,5 @@ public class Gate : MonoBehaviour {
 
 		return sceneIndex;
 	}
+	
 }

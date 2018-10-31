@@ -22299,27 +22299,32 @@ Prefab:
     - target: {fileID: 114550389807023358, guid: ca507b6963c65464283bedc2de66a520,
         type: 2}
       propertyPath: m_FontData.m_Alignment
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 224856676556281112, guid: ca507b6963c65464283bedc2de66a520,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: -96.4
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 224856676556281112, guid: ca507b6963c65464283bedc2de66a520,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -96.4
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 224856676556281112, guid: ca507b6963c65464283bedc2de66a520,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 31.899994
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224856676556281112, guid: ca507b6963c65464283bedc2de66a520,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 31.9
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224856676556281112, guid: ca507b6963c65464283bedc2de66a520,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: -200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca507b6963c65464283bedc2de66a520, type: 2}

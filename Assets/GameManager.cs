@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour {
 
 		pauseCanvas.enabled = false;
 
-		unlockedLevels = new int[] { 1, 1, 1, 1, 1, 1, 1, 1 };
+		unlockedLevels = new int[] { 1, 1, 1, 1, 0, 0, 0, 0 };
 		buildSettingsMap = new Dictionary<int, int>();
 
 		buildSettingsMap.Add(3, 0);
@@ -65,6 +65,7 @@ public class GameManager : MonoBehaviour {
 		if (pauseRelease)
 		{
 			int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+			Debug.Log("Scene " + sceneIndex);
 
 			if (buildSettingsMap.ContainsKey(sceneIndex))
 			{
