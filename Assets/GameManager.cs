@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -14,6 +15,8 @@ public class GameManager : MonoBehaviour {
 	Dictionary<int, int> buildSettingsMap;
 
 	private bool soundOn;
+
+	public Canvas pauseCanvas;
 	private bool paused = false;
 
 	void Awake () {
@@ -38,6 +41,8 @@ public class GameManager : MonoBehaviour {
 		if (mute)
 			AudioListener.volume = 0f;
 
+		pauseCanvas.enabled = false;
+
 		unlockedLevels = new int[] { 1, 0, 0, 0, 0, 0, 0, 0 };
 		buildSettingsMap = new Dictionary<int, int>();
 
@@ -55,20 +60,27 @@ public class GameManager : MonoBehaviour {
 
 	public void Update()
 	{
-		bool pauseRelease = Input.GetButtonUp("Jump");
+		bool pauseRelease = Input.GetButtonUp("Fire3");
+
 		if (pauseRelease)
 		{
-			Debug.Log("paused button is here");
-			if (paused)
+			int sceneIndex = SceneManager.GetActiveScene().buildIndex;
+
+			if (buildSettingsMap.ContainsKey(sceneIndex))
 			{
-				Time.timeScale = 1;
-				paused = false;
-			}
-			else
-			{
-				// Pause the game
-				Time.timeScale = 0;
-				paused = true;
+				if (paused)
+				{
+					Time.timeScale = 1;
+					paused = false;
+					pauseCanvas.enabled = false;
+				}
+				else
+				{
+					// Pause the game
+					Time.timeScale = 0;
+					paused = true;
+					pauseCanvas.enabled = true;
+				}
 			}
 		}
 	}
@@ -105,6 +117,11 @@ public class GameManager : MonoBehaviour {
 		}
 
 		//levelsComplete.Add(i);
+	}
+
+	public bool IsPaused()
+	{
+		return paused;
 	}
 
 }

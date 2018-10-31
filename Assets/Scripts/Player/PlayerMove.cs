@@ -28,6 +28,8 @@ public class PlayerMove : MonoBehaviour {
 	Rigidbody2D rb;
 	bool disableMove = false;
 
+	GameManager gm;
+
 	private void Start()
 	{
 		rb = gameObject.GetComponent<Rigidbody2D>();
@@ -35,6 +37,9 @@ public class PlayerMove : MonoBehaviour {
 		curPlayerSpeed = maxPlayerSpeed;
 
 		jumpAudioSource.clip = jumpSound;
+
+		GameObject go = GameObject.FindGameObjectWithTag("GM");
+		gm = go.GetComponent<GameManager>();
 	}
 
 	// Update is called once per frame
@@ -144,12 +149,12 @@ public class PlayerMove : MonoBehaviour {
 
 	void PlayerMovement()
 	{
-		if (health.HasDied() || disableMove)
+		if (health.HasDied() || disableMove || gm.IsPaused())
 			return;
 
 		// Controls
 		xMovement = Input.GetAxis("Horizontal");
-		bool jump = Input.GetButtonDown("Fire1");
+		bool jump = Input.GetButtonDown("Jump");
 
 		if (jump || Input.GetKeyDown("w") || Input.GetKeyDown("k"))
 		{

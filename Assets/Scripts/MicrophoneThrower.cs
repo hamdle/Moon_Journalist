@@ -17,17 +17,25 @@ public class MicrophoneThrower : MonoBehaviour {
 
 	Rigidbody2D rb;
 
+	GameManager gm;
+
 	// Use this for initialization
 	void Start () {
 		rb = gameObject.GetComponent<Rigidbody2D>();
 
 		throwAudioSource.clip = throwSound;
+
+		GameObject go = GameObject.FindGameObjectWithTag("GM");
+		gm = go.GetComponent<GameManager>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if (Input.GetButtonDown("Fire3") || Input.GetKeyDown("l"))
+		if (gm.IsPaused())
+			return;
+
+		if (Input.GetButtonDown("Fire1") || Input.GetKeyDown("l"))
 		{
 			// Disable firing only if dialog asks for it not to be shown
 			ProcessDialog pd = GetComponent<ProcessDialog>();
