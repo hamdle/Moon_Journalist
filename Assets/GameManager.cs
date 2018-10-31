@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour {
 
 		pauseCanvas.enabled = false;
 
-		unlockedLevels = new int[] { 1, 0, 0, 0, 0, 0, 0, 0 };
+		unlockedLevels = new int[] { 1, 1, 1, 1, 1, 1, 1, 1 };
 		buildSettingsMap = new Dictionary<int, int>();
 
 		buildSettingsMap.Add(3, 0);
