@@ -201,6 +201,9 @@ Transform:
   - {fileID: 2059994616}
   - {fileID: 2034068945}
   - {fileID: 170479181}
+  - {fileID: 1481835530}
+  - {fileID: 1936375778}
+  - {fileID: 531337225}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -606,7 +609,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &161991906
 Transform:
   m_ObjectHideFlags: 0
@@ -619,9 +622,6 @@ Transform:
   m_Children:
   - {fileID: 1933326431}
   - {fileID: 1726955694}
-  - {fileID: 510381030}
-  - {fileID: 304035436}
-  - {fileID: 1412344604}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -859,148 +859,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e8c8407ea04b63a439d3385191fcc839, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &304035435
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 161991906}
-    m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: dialog.sentences.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -472
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -191.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 5.045282
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: dialog.name
-      value: Camera Man
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: dialog.sentences.Array.data[1]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: dialog.sentences.Array.data[2]
-      value: Have you seen a tornado?3
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: dialog.sentences.Array.data[0]
-      value: '...in 5... 4...'
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.name
-      value: ERIC
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.data[2]
-      value: WOOOOOOO!!
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.data[3]
-      value: No news again.
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.data[0]
-      value: You can shoot microphones.
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.data[4]
-      value: As we continue our year long streak.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1878182377871004, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_Name
-      value: Dialog (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: freezeGame
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: zoomIn
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: disableControls
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 61047578714003512, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: 1.542521
-      objectReference: {fileID: 0}
-    - target: {fileID: 61047578714003512, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 5.47906
-      objectReference: {fileID: 0}
-    - target: {fileID: 114492915451627832, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialogID
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1878182377871004, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
-    - {fileID: 114682703312909714, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &304035436 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a,
-    type: 2}
-  m_PrefabInternal: {fileID: 304035435}
 --- !u!4 &305951863 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4663938321064380, guid: c2a1118dc2eec0a42b8bc9d8fc64607e,
@@ -1345,6 +1203,11 @@ Prefab:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 930916011}
+    - target: {fileID: 114486678372118518, guid: 69fb71f4e882a464194ff13915d944c4,
+        type: 2}
+      propertyPath: totalCoins
+      value: 21
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69fb71f4e882a464194ff13915d944c4, type: 2}
   m_IsPrefabParent: 0
@@ -1718,148 +1581,57 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6d89a4c7099fcea41b2cf0faeb7494d1, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &510381029
+--- !u!1001 &531337224
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 161991906}
+    m_TransformParent: {fileID: 4970356}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: dialog.sentences.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -324.62
+      value: 37.5
       objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -191.76
+      value: -0.49
       objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 5.045282
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: dialog.name
-      value: Camera Man
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: dialog.sentences.Array.data[1]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: dialog.sentences.Array.data[2]
-      value: Have you seen a tornado?3
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: dialog.sentences.Array.data[0]
-      value: '...in 5... 4...'
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.name
-      value: ERIC
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.data[2]
-      value: WOOOOOOO!!
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.data[3]
-      value: No news again.
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.data[0]
-      value: You can double jump against walls.
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.data[4]
-      value: As we continue our year long streak.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1878182377871004, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
+    - target: {fileID: 1978773358780942, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
       propertyPath: m_Name
-      value: Dialog (3)
+      value: Coin (17)
       objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: freezeGame
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: zoomIn
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: disableControls
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 61047578714003512, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: 1.542521
-      objectReference: {fileID: 0}
-    - target: {fileID: 61047578714003512, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 5.47906
-      objectReference: {fileID: 0}
-    - target: {fileID: 114492915451627832, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialogID
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1878182377871004, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
-    - {fileID: 114682703312909714, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &510381030 stripped
+--- !u!4 &531337225 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a,
+  m_PrefabParentObject: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f,
     type: 2}
-  m_PrefabInternal: {fileID: 510381029}
+  m_PrefabInternal: {fileID: 531337224}
 --- !u!1001 &533104882
 Prefab:
   m_ObjectHideFlags: 0
@@ -2976,12 +2748,12 @@ Prefab:
     - target: {fileID: 224847971319257360, guid: 5067478a20811f34d969f573bc85d43e,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 960
       objectReference: {fileID: 0}
     - target: {fileID: 224847971319257360, guid: 5067478a20811f34d969f573bc85d43e,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 224847971319257360, guid: 5067478a20811f34d969f573bc85d43e,
         type: 2}
@@ -3120,7 +2892,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1396683618132636, guid: 5067478a20811f34d969f573bc85d43e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114399831143100042, guid: 5067478a20811f34d969f573bc85d43e,
         type: 2}
@@ -3439,127 +3211,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4701046547980196, guid: 413a1ec26262f8f4c85c41691340ed40,
     type: 2}
   m_PrefabInternal: {fileID: 2103680229}
---- !u!1001 &1011928344
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 161991906}
-    m_Modifications:
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114682703312909714, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -341.41
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -191.74
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 5.045282
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1878182377871004, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_Name
-      value: Dialog (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114278960719634852, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: forceDialogToPlay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114682703312909714, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.data[0]
-      value: tornado laughing
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.data[1]
-      value: Did you hear that?
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.data[0]
-      value: I'm here live with.. WAIT..
-      objectReference: {fileID: 0}
-    - target: {fileID: 114682703312909714, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.data[1]
-      value: '* and other tornado noises *'
-      objectReference: {fileID: 0}
-    - target: {fileID: 114492915451627832, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialogID
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114682703312909714, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.name
-      value: ??????
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: zoomIn
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: zoomToPosition
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.data[2]
-      value: '...'
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.data[3]
-      value: I 'm here live with a tornado
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.data[4]
-      value: located somewhere in the distance behind me.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1878182377871004, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 114682703312909714, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &1013738287
 Prefab:
   m_ObjectHideFlags: 0
@@ -3644,6 +3295,149 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 634c4833a3e2dc447af7fd8351d9b458, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1037360122
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1878182377871004, guid: 773eaf657de3ebd45b64d0386a10658a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1726955694}
+  - component: {fileID: 1037360126}
+  - component: {fileID: 1037360125}
+  - component: {fileID: 1037360124}
+  - component: {fileID: 1037360127}
+  - component: {fileID: 1037360128}
+  - component: {fileID: 1037360129}
+  m_Layer: 2
+  m_Name: Dialog (2)
+  m_TagString: Dialog
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1037360124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114278960719634852, guid: 773eaf657de3ebd45b64d0386a10658a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1037360122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e00befd4e4895df4fa04ccabd59322eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceDialogToPlay: 1
+--- !u!114 &1037360125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114492915451627832, guid: 773eaf657de3ebd45b64d0386a10658a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1037360122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a978606b8f257c245b03bb49b9bfaa1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogID: 2
+--- !u!61 &1037360126
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 61047578714003512, guid: 773eaf657de3ebd45b64d0386a10658a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1037360122}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 1.542521}
+  m_SpriteTilingProperty:
+    border: {x: 0.07, y: 0.08, z: 0.07, w: 0.089999996}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.1573017, y: 5.47906}
+  m_EdgeRadius: 0
+--- !u!114 &1037360127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1037360122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5287b38aeb7ff8d46854d711579c2dd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  freezeGame: 0
+  zoomIn: 1
+  zoomToPosition: 3
+  disableControls: 1
+  dialog:
+    name: PETE CACTUS
+    sentences:
+    - This is a special Moon News report.
+    - I'm your host Pete Cactus.
+    - We're live on the scene.
+    - Looking for the first Moon tornado.
+    - So far we have no confirmed sightings.
+    - As well as very few unconfirmed sightings.
+--- !u!114 &1037360128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1037360122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5287b38aeb7ff8d46854d711579c2dd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  freezeGame: 1
+  zoomIn: 1
+  zoomToPosition: 1
+  disableControls: 1
+  dialog:
+    name: PETE CACTUS
+    sentences:
+    - I'm getting an update now.
+    - I'm being told I should find a better hat...
+    - one that won't blow off my head so easily.
+--- !u!114 &1037360129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1037360122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5287b38aeb7ff8d46854d711579c2dd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  freezeGame: 1
+  zoomIn: 1
+  zoomToPosition: 3
+  disableControls: 1
+  dialog:
+    name: PETE CACTUS
+    sentences:
+    - What great Moon tornado advice.
+    - Follow me for more in-depth coverage.
+    - As we search the Moon...
+    - for a good hat to wear...
+    - in the event of a Moon tornado.
 --- !u!1001 &1039301028
 Prefab:
   m_ObjectHideFlags: 0
@@ -4023,7 +3817,7 @@ Prefab:
     - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
         type: 2}
       propertyPath: dialog.name
-      value: CAMERA MAN
+      value: CAMERA PERSON
       objectReference: {fileID: 0}
     - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
         type: 2}
@@ -4467,7 +4261,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4273309025496294, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3.445
+      value: -3.43
       objectReference: {fileID: 0}
     - target: {fileID: 4273309025496294, guid: 0d2ad894254d39a41b2a7b9cf8d3cdf8, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4658,148 +4452,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4a19ff92e06e1fa42b550d18769c3b50, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &1412344603
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 161991906}
-    m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: dialog.sentences.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -391
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -191.76
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 5.045282
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: dialog.name
-      value: Camera Man
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: dialog.sentences.Array.data[1]
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: dialog.sentences.Array.data[2]
-      value: Have you seen a tornado?3
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: dialog.sentences.Array.data[0]
-      value: '...in 5... 4...'
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.name
-      value: ERIC
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.data[2]
-      value: WOOOOOOO!!
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.data[3]
-      value: No news again.
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.data[0]
-      value: You can shoot these crates to break them.
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialog.sentences.Array.data[4]
-      value: As we continue our year long streak.
-      objectReference: {fileID: 0}
-    - target: {fileID: 1878182377871004, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_Name
-      value: Dialog (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: freezeGame
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: zoomIn
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: disableControls
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 61047578714003512, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: 1.542521
-      objectReference: {fileID: 0}
-    - target: {fileID: 61047578714003512, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 5.47906
-      objectReference: {fileID: 0}
-    - target: {fileID: 114492915451627832, guid: 773eaf657de3ebd45b64d0386a10658a,
-        type: 2}
-      propertyPath: dialogID
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1878182377871004, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
-    - {fileID: 114682703312909714, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &1412344604 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1412344603}
 --- !u!4 &1416388677 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f,
@@ -44397,6 +44049,57 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 703cfac2c76e0fe47aee8b7ac71ed443, type: 2}
   m_IsPrefabParent: 0
+--- !u!1001 &1481835529
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4970356}
+    m_Modifications:
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 35.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.49
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978773358780942, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
+      propertyPath: m_Name
+      value: Coin (15)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1481835530 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1481835529}
 --- !u!1001 &1486981852
 Prefab:
   m_ObjectHideFlags: 0
@@ -44799,11 +44502,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aab9b263e267f247bd05418f6ddc872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1726955694 stripped
+--- !u!4 &1726955694
 Transform:
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a,
     type: 2}
-  m_PrefabInternal: {fileID: 1011928344}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1037360122}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -156.37, y: -189.77, z: 5.045282}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 161991906}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1731902527
 Prefab:
   m_ObjectHideFlags: 0
@@ -45538,14 +45250,82 @@ MonoBehaviour:
   dialog:
     name: PETE CACTUS
     sentences:
-    - Welcome to Moon News.
-    - I'm your host...
-    - Pete Cactus.
+    - We have reports of a tornado.
+--- !u!114 &1933326427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1933326425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5287b38aeb7ff8d46854d711579c2dd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  freezeGame: 0
+  zoomIn: 1
+  zoomToPosition: 5
+  disableControls: 1
+  dialog:
+    name: 
+    sentences:
+    - A Moon tornado.
 --- !u!4 &1933326431 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a,
     type: 2}
   m_PrefabInternal: {fileID: 1171248523}
+--- !u!1001 &1936375777
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4970356}
+    m_Modifications:
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 43.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1978773358780942, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
+      propertyPath: m_Name
+      value: Coin (16)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &1936375778 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1936375777}
 --- !u!4 &1961255000 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f,

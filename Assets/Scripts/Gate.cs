@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -80,7 +81,11 @@ public class Gate : MonoBehaviour {
 
 			// Log time
 			completeTimer = Time.time - levelTimer;
-			timeDisplay.text = completeTimer.ToString("n2");
+			TimeSpan time = TimeSpan.FromSeconds(completeTimer);
+			string str = string.Format("{0:D1}:{1:D2}",
+					time.Minutes,
+					time.Seconds);
+			timeDisplay.text = str;
 
 			zoomIn = false;
 			clearCanvas.enabled = true;

@@ -2890,12 +2890,12 @@ Prefab:
     - target: {fileID: 224847971319257360, guid: 5067478a20811f34d969f573bc85d43e,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 960
       objectReference: {fileID: 0}
     - target: {fileID: 224847971319257360, guid: 5067478a20811f34d969f573bc85d43e,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 224847971319257360, guid: 5067478a20811f34d969f573bc85d43e,
         type: 2}
@@ -3034,7 +3034,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1396683618132636, guid: 5067478a20811f34d969f573bc85d43e, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114399831143100042, guid: 5067478a20811f34d969f573bc85d43e,
         type: 2}
@@ -3415,30 +3415,6 @@ Transform:
   m_PrefabParentObject: {fileID: 4663938321064380, guid: c2a1118dc2eec0a42b8bc9d8fc64607e,
     type: 2}
   m_PrefabInternal: {fileID: 1795534580}
---- !u!1 &1166828709 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1878182377871004, guid: 773eaf657de3ebd45b64d0386a10658a,
-    type: 2}
-  m_PrefabInternal: {fileID: 2131375988}
---- !u!114 &1166828710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1166828709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5287b38aeb7ff8d46854d711579c2dd9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  freezeGame: 0
-  zoomIn: 1
-  zoomToPosition: 4
-  disableControls: 0
-  dialog:
-    name: ??????
-    sentences:
-    - WHOOOSH! WOO!!
 --- !u!4 &1166828715 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a,
@@ -22618,15 +22594,15 @@ Prefab:
     - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
         type: 2}
       propertyPath: dialog.sentences.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -470.9323
+      value: -463.47
       objectReference: {fileID: 0}
     - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -189.84709
+      value: -188.82
       objectReference: {fileID: 0}
     - target: {fileID: 4898870432027590, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -22691,7 +22667,7 @@ Prefab:
     - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
         type: 2}
       propertyPath: dialog.sentences.Array.data[0]
-      value: Over there!
+      value: This looks like a pretty good hat.
       objectReference: {fileID: 0}
     - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
         type: 2}
@@ -22710,12 +22686,12 @@ Prefab:
     - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
         type: 2}
       propertyPath: zoomIn
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
         type: 2}
       propertyPath: disableControls
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 61047578714003512, guid: 773eaf657de3ebd45b64d0386a10658a,
         type: 2}
@@ -22735,6 +22711,11 @@ Prefab:
     - target: {fileID: 1878182377871004, guid: 773eaf657de3ebd45b64d0386a10658a, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114050695085670220, guid: 773eaf657de3ebd45b64d0386a10658a,
+        type: 2}
+      propertyPath: zoomToPosition
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}

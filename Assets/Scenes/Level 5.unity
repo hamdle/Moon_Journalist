@@ -287,7 +287,7 @@ Prefab:
     - target: {fileID: 114169315853356540, guid: 558db8f6b934f0045ae78a757857a880,
         type: 2}
       propertyPath: mute
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224164185692696826, guid: 558db8f6b934f0045ae78a757857a880,
         type: 2}
@@ -1070,6 +1070,11 @@ Prefab:
     - target: {fileID: 1288017342274122, guid: 69fb71f4e882a464194ff13915d944c4, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114486678372118518, guid: 69fb71f4e882a464194ff13915d944c4,
+        type: 2}
+      propertyPath: totalCoins
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69fb71f4e882a464194ff13915d944c4, type: 2}

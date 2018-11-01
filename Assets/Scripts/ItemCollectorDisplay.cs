@@ -32,7 +32,9 @@ public class ItemCollectorDisplay : MonoBehaviour {
 
 	private void UpdateCoinsDisplay()
 	{
-		coinText.text = (itemCollector.GetCoins() / totalCoins * 100.0f).ToString("n0") + "%";
+		float coinPercentage = itemCollector.GetCoins() / totalCoins * 100.0f;
+
+		coinText.text = coinPercentage.ToString("n0") + "%";
 	}
 
 	private void UpdateHealthDisplay()
