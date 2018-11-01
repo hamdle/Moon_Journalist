@@ -10,6 +10,7 @@ public class ItemCollectorDisplay : MonoBehaviour {
 	public PlayerHealth playerHealth;
 	public Text coinText;
 	public GameObject heart;
+	public float totalCoins;
 
 	int prevHealth;
 	Stack heartStack;
@@ -31,7 +32,7 @@ public class ItemCollectorDisplay : MonoBehaviour {
 
 	private void UpdateCoinsDisplay()
 	{
-		coinText.text = itemCollector.GetCoins().ToString();
+		coinText.text = (itemCollector.GetCoins() / totalCoins * 100.0f).ToString("n0") + "%";
 	}
 
 	private void UpdateHealthDisplay()
