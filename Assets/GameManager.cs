@@ -9,6 +9,10 @@ public class GameManager : MonoBehaviour {
 	public AudioSource OKAudio;
 	public bool mute = false;
 
+	//public AudioClip menuAudioClip;
+	public AudioSource menuAudioSource;
+	public AudioSource gameplayAudioSource;
+
 	//public List<int> levelsComplete;
 	// New
 	public int[] unlockedLevels;
@@ -58,6 +62,11 @@ public class GameManager : MonoBehaviour {
 		soundOn = true;
 	}
 
+	public void Start()
+	{
+		//menuAudioSource.clip = menuAudioClip;
+		menuAudioSource.Play();
+	}
 	public void Update()
 	{
 		bool pauseRelease = Input.GetButtonUp("Fire3") || Input.GetButtonDown("Cancel");
@@ -109,12 +118,23 @@ public class GameManager : MonoBehaviour {
 		OKAudio.Play();
 	}
 
+	public void PlayGamePlayMusic()
+	{
+		// Music transition from menu to gameplay
+		//Debug.Log("gameplay music");
+		menuAudioSource.Stop();
+		gameplayAudioSource.Play();
+	}
+
 	public void LevelComplete(int i)
 	{
 		Debug.Log("Level completed " + unlockedLevels.Length);
 		if (buildSettingsMap.ContainsKey(i + 1))
 		{
 			unlockedLevels[buildSettingsMap[i + 1]] = 1;
+			// Music transition from gameplay to menu
+			gameplayAudioSource.Stop();
+			menuAudioSource.Play();
 		}
 
 		//levelsComplete.Add(i);

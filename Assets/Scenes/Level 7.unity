@@ -1792,11 +1792,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 23.54
+      value: 25.52
       objectReference: {fileID: 0}
     - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.5
+      value: -0.52
       objectReference: {fileID: 0}
     - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2055,7 +2055,7 @@ Prefab:
     - target: {fileID: 114486678372118518, guid: 69fb71f4e882a464194ff13915d944c4,
         type: 2}
       propertyPath: totalCoins
-      value: 6
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69fb71f4e882a464194ff13915d944c4, type: 2}
@@ -2211,7 +2211,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.5
+      value: 1.52
       objectReference: {fileID: 0}
     - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2268,7 +2268,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.5
+      value: 1.52
       objectReference: {fileID: 0}
     - target: {fileID: 4417729337218356, guid: 7f3316caa4e125f40927ba1f7baff32f, type: 2}
       propertyPath: m_LocalPosition.z

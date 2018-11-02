@@ -9,6 +9,12 @@ public class LoadOnButtonPress : MonoBehaviour {
 
 	public void LoadScene()
 	{
+		Debug.Log("button press");
+		GameObject go = GameObject.FindGameObjectWithTag("GM");
+		GameManager gm = go.GetComponent<GameManager>();
+
+		if (sceneIndex != 0)
+			gm.PlayGamePlayMusic();
 
 		SceneManager.LoadScene(sceneIndex);
 	}
