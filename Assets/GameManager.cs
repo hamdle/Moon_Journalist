@@ -83,6 +83,7 @@ public class GameManager : MonoBehaviour {
 					Time.timeScale = 1;
 					paused = false;
 					pauseCanvas.enabled = false;
+					gameplayAudioSource.UnPause();
 				}
 				else
 				{
@@ -90,6 +91,7 @@ public class GameManager : MonoBehaviour {
 					Time.timeScale = 0;
 					paused = true;
 					pauseCanvas.enabled = true;
+					gameplayAudioSource.Pause();
 				}
 			}
 		}
@@ -124,6 +126,12 @@ public class GameManager : MonoBehaviour {
 		//Debug.Log("gameplay music");
 		menuAudioSource.Stop();
 		gameplayAudioSource.Play();
+	}
+
+	public void PlayWinGameMusic()
+	{
+		menuAudioSource.Play();
+		gameplayAudioSource.Stop();
 	}
 
 	public void LevelComplete(int i)

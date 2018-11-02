@@ -10,8 +10,8 @@ public class UnlockedLevelsController : MonoBehaviour {
 		GameObject go = GameObject.FindGameObjectWithTag("GM");
 		GameManager gm = go.GetComponent<GameManager>();
 		//gm.LevelComplete(SceneManager.GetActiveScene().buildIndex);
-		Debug.Log(gm.unlockedLevels[0]);
-		Debug.Log(gm.unlockedLevels[1]);
+		//Debug.Log(gm.unlockedLevels[0]);
+		//Debug.Log(gm.unlockedLevels[1]);
 
 		//GameObject Level1 = GameObject.FindGameObjectWithTag("Level 1");
 		//Button Level1Button = Level1.GetComponent<Button>();
