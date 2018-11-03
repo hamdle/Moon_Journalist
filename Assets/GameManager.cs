@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour {
 	//public AudioClip menuAudioClip;
 	public AudioSource menuAudioSource;
 	public AudioSource gameplayAudioSource;
+	public AudioSource gameplayAudioSource1;
+	public AudioSource gameplayAudioSource2;
+	public AudioSource gameplayAudioSource3;
 
 	//public List<int> levelsComplete;
 	// New
@@ -122,9 +125,33 @@ public class GameManager : MonoBehaviour {
 
 	public void PlayGamePlayMusic()
 	{
-		// Music transition from menu to gameplay
-		//Debug.Log("gameplay music");
+		// Gameplay music is decided here
 		menuAudioSource.Stop();
+		
+		int i = Random.Range(0, 3);
+		Debug.Log(i);
+		switch (i)
+		{
+			case 0:
+				gameplayAudioSource = gameplayAudioSource1;
+				Debug.Log(i);
+				break;
+			case 1:
+				gameplayAudioSource = gameplayAudioSource2;
+				Debug.Log(i);
+				break;
+			case 2:
+				gameplayAudioSource = gameplayAudioSource3;
+				Debug.Log(i);
+				break;
+			default:
+				gameplayAudioSource = gameplayAudioSource1;
+				Debug.Log("d");
+				break;
+		}
+		//gameplayAudioSource.Play();
+		//gameplayAudioSource2
+		//gameplayAudioSource3
 		gameplayAudioSource.Play();
 	}
 
